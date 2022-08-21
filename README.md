@@ -22,4 +22,10 @@ Front-End será desenvolvido em:
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" width="52" alt="css3" title="css" /> [CSS3](https://www.w3schools.com/css/)
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript" title="javascript" /> [JavaScript](https://www.javascript.com/)
 
-Coom o foco de atender os dispositivos desktop e mobile.
+Com o foco de atender os dispositivos desktop e mobile.
+
+## Tools :inbox_tray:
+
+## Back - End :construction:
+
+### Rotas :twisted_rightwards_arrows:
