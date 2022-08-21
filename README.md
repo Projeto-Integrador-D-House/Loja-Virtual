@@ -4,6 +4,9 @@ E-commerce voltado para venda de jogos digitais, consoles e acessórios.
 
 Nosso principal objetivo é que sua experiência com o mundo gamer seja a mais incrível possível.
 
+## Figma :point_down:
+
+https://www.figma.com/file/WHY4MpG8RqjlXtuElOlFmS/Wireframe-DH-PI?node-id=7%3A595
 
 ## Equipe :computer:
 -   @lucasakirahori
