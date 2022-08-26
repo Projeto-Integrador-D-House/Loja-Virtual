@@ -19,6 +19,7 @@ header{
     color: var(--clr-white);
     background-color: var(--clr-opacity-black);
     opacity: 0.5;
+    font-size: 1.05rem;
 }
 
 header div.header-logon img{
