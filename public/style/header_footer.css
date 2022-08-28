@@ -9,18 +9,20 @@ body{
 
 header{
     display: flex;
+    opacity: 0.8;
     justify-content: space-between;
-    width: 90%;
+    width: 98%;
     height: 130px;
-    margin: 25px 50px;
+    margin: 25px 10px;
     padding: 10px;
     text-align: center;
     align-items: center;
-    color: var(--clr-white);
     background-color: var(--clr-opacity-black);
-    opacity: 0.5;
     font-size: 1.05rem;
+    
 }
+
+
 
 header div.header-logon img{
     width: 110px;
@@ -30,10 +32,11 @@ header div.header-logon img{
 header nav.header-menu .menu-principal ul{ 
     display: flex;
     align-items: center;
+    color: var(--clr-white);
+    font-family: var(--f-secundary);
 }
 header nav.header-menu .menu-principal ul li{
     text-transform: uppercase;
-    color: (--clr-white);
     letter-spacing: 0.05rem;
 }
 .menu-principal li:nth-child(2){
