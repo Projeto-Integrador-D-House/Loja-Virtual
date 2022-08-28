@@ -1,0 +1,21 @@
+{
+  "name": "loja-virtual-64-games",
+  "version": "1.0.0",
+  "description": "Loja Virtual de Games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Projeto-Integrador-D-House/Loja-Virtual.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Projeto-Integrador-D-House/Loja-Virtual/issues"
+  },
+  "homepage": "https://github.com/Projeto-Integrador-D-House/Loja-Virtual#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

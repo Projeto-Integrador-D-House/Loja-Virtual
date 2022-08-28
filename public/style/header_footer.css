@@ -1,4 +1,4 @@
-@import '/Loja-Virtual/public/style/main.css';
+@import './main.css';
 
 body{
     background-color: var(--clr-dark-blue);
@@ -22,7 +22,7 @@ header{
     font-size: 1.05rem;
 }
 
-header div.header-logon img{
+header div.header-logo img{
     width: 110px;
     height: 110px;
 }
@@ -33,14 +33,16 @@ header nav.header-menu .menu-principal ul{
 }
 header nav.header-menu .menu-principal ul li{
     text-transform: uppercase;
-    color: (--clr-white);
+    color: var(--clr-white);
     letter-spacing: 0.05rem;
+    padding: 20px;}
+
+header nav.header-menu .menu-principal ul li:hover{
+    background-color: var(--clr-purple);
+    height: 60px;
+    border-radius: 5px;
 }
-.menu-principal li:nth-child(2){
-    margin-left: 25px;
-    margin-right: 25px;
-}
-.menu-principal li:nth-child(4){
-    margin-left: 25px;
-    margin-right: 25px;
+.carrcell {
+    width: 100%;
+    overflow: hidden;
 }
