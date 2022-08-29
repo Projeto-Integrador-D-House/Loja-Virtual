@@ -22,13 +22,8 @@ header{
     
 }
 
-<<<<<<< HEAD
+header .header-logo a img{
 
-
-header div.header-logon img{
-=======
-header div.header-logo img{
->>>>>>> b3f53c222ccf33cecc7965b48a0a88986f1e0bd4
     width: 110px;
     height: 110px;
 }
@@ -41,10 +36,7 @@ header nav.header-menu .menu-principal ul{
 }
 header nav.header-menu .menu-principal ul li{
     text-transform: uppercase;
-<<<<<<< HEAD
-=======
     color: var(--clr-white);
->>>>>>> b3f53c222ccf33cecc7965b48a0a88986f1e0bd4
     letter-spacing: 0.05rem;
     padding: 20px;}
 
@@ -56,4 +48,71 @@ header nav.header-menu .menu-principal ul li:hover{
 .carrcell {
     width: 100%;
     overflow: hidden;
+}
+
+footer {
+    font-family: var(--f-secundary);
+    background-color: var(--clr-opacity-black);
+    opacity: 0.8;
+    margin: 10px 10px;
+    padding: 20px;
+}
+
+footer .footer-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer .footer-logomarca a img{
+    width: 110px;
+    height: 110px;
+    
+}
+
+footer .titulo{
+    margin-bottom: 15px;
+}
+
+footer ul li:nth-child(2){
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+footer ul li:nth-child(4){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer ul li:nth-child(6){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer div.footer-redes_sociais{
+    text-align: right;
+}
+footer div.footer-redes_sociais h4{
+    padding: 10px;
+    border-bottom: 1px dotted var(--clr-white);
+}
+
+footer div.footer-redes_sociais ul{
+    display: inline-flex;
+    font-size: 25px;
+}
+
+footer div.footer-redes_sociais ul li{
+    align-items: center;
+    margin-top:10px;
+
+}
+footer div.footer-redes_sociais ul li:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer div.footer-redes_sociais ul li:nth-child(4){
+    margin-left: 10px;
+    margin-right: 10px;
 }
