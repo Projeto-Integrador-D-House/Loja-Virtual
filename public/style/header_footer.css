@@ -54,8 +54,9 @@ footer {
     font-family: var(--f-secundary);
     background-color: var(--clr-opacity-black);
     opacity: 0.8;
-    margin: 10px 10px;
+    margin: 0px 10px;
     padding: 20px;
+    padding-bottom: 0;
 }
 
 footer .footer-principal{
@@ -73,6 +74,8 @@ footer .footer-logomarca a img{
 
 footer .titulo{
     margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 footer ul li:nth-child(2){
@@ -94,6 +97,7 @@ footer div.footer-redes_sociais{
     text-align: right;
 }
 footer div.footer-redes_sociais h4{
+    font-weight: 400;
     padding: 10px;
     border-bottom: 1px dotted var(--clr-white);
 }
@@ -101,6 +105,7 @@ footer div.footer-redes_sociais h4{
 footer div.footer-redes_sociais ul{
     display: inline-flex;
     font-size: 25px;
+    margin-bottom: 0px;
 }
 
 footer div.footer-redes_sociais ul li{
@@ -113,6 +118,45 @@ footer div.footer-redes_sociais ul li:nth-child(2){
     margin-right: 10px;
 }
 footer div.footer-redes_sociais ul li:nth-child(4){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer div.formas-de-pagamento{
+    text-align: left;
+}
+footer div.formas-de-pagamento h4{
+    font-weight: 400;
+    padding: 10px;
+    padding-left: 0;
+    border-bottom: 1px solid var(--clr-white);
+}
+
+footer div.formas-de-pagamento ul{
+    background-color: var(--clr-white);
+    width: 100%;
+    display: inline-flex;
+    font-size: 25px;
+}
+
+footer div.formas-de-pagamento ul li{
+    align-items: center;
+    margin-top:10px;
+}
+
+footer div.formas-de-pagamento ul li i{
+    color: var(--clr-dark-blue);
+    padding: 5px;
+    font-size: 30px;
+}
+footer div.formas-de-pagamento ul li:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer div.formas-de-pagamento ul li:nth-child(4){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer div.formas-de-pagamento ul li:nth-child(6){
     margin-left: 10px;
     margin-right: 10px;
 }
