@@ -1,0 +1,12 @@
+@import './main.css';
+@import './header_footer.css';
+
+main .container-descricao{
+    display: flex;
+    align-items: center
+}
+
+main .imagem-produto img{
+    width: 500px;
+    height: 373px;
+}
