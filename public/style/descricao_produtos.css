@@ -3,10 +3,36 @@
 
 main .container-descricao{
     display: flex;
-    align-items: center
+    margin: 25px 485px;
 }
 
 main .imagem-produto img{
     width: 500px;
     height: 373px;
+}
+
+.container-descricao .nome-produto {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.container-descricao .nome-produto h3, .container-descricao .nome-produto small{
+    font-family: var(--f-primary);
+    padding-bottom: 13px;
+}
+
+.container-descricao .nome-produto h3{
+    font-size: 42px;
+}
+.container-descricao .nome-produto small{
+    font-size: 10px;
+}
+
+.preco-produto{
+    margin-top: 10px;
+    font-family: var(--f-secundary);
+    font-size: 16px;
+}
+.preco-produto .preco-normal h5{
+    text-decoration: line-through;
 }
