@@ -4,6 +4,7 @@
 main .container-descricao{
     display: flex;
     margin: 25px 485px;
+
 }
 
 main .imagem-produto img{
@@ -29,10 +30,49 @@ main .imagem-produto img{
 }
 
 .preco-produto{
+    position: relative;
     margin-top: 10px;
     font-family: var(--f-secundary);
     font-size: 16px;
+    top: 25px;
 }
-.preco-produto .preco-normal h5{
+
+.preco-produto .preco-normal{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.preco-produto .preco-normal h4{
     text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.preco-produto .preco-promocional{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    
+}
+
+.preco-produto .preco-promocional h4{
+    margin-left: 5px;
+}
+
+.preco-produto .preco-promocional h4 , .preco-produto .preco-promocional h5{
+    color: var(--clr-green);
+}
+
+.container-descricao .quantidade-produto input{
+    background-color: var(--clr-black);
+    border: 1px solid var(--clr-white);
+    border-radius: 5px;
+    padding: 6px;
+    width: 49px;
+    outline: none;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.container-descricao .descricao{
+    display: flex;
 }
