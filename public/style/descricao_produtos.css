@@ -3,13 +3,28 @@
 
 main .container-descricao{
     display: flex;
-    margin: 25px 485px;
+    margin: 25px 450px;
+    align-items: center;
+}
 
+main .img-pequenas{
+    margin-right: 20px;
+}
+
+main .img-pequenas ul li:nth-child(2){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .img-pequenas img{
+   width: 55px;
+   height: 55px;
+   border-radius: 5px;
 }
 
 main .imagem-produto img{
-    width: 500px;
-    height: 373px;
+    width: 700px;
+    height: 450px;
 }
 
 .container-descricao .nome-produto {
@@ -62,9 +77,14 @@ main .imagem-produto img{
     color: var(--clr-green);
 }
 
+.container-descricao .quantidade-produto label{
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
 .container-descricao .quantidade-produto input{
     background-color: var(--clr-black);
     border: 1px solid var(--clr-white);
+    font-family: var(--f-secundary);
     border-radius: 5px;
     padding: 6px;
     width: 49px;
@@ -73,6 +93,45 @@ main .imagem-produto img{
     text-align: center;
 }
 
-.container-descricao .descricao{
+.container-descricao .quantidade-produto button{
+    background-color: var(--clr-green);
+    padding: 10px;
+    font-family: var(--f-secundary);
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid var(--clr-green);
+    border-radius: 7px;
+
+    margin-left: 15px;
+
+}
+
+.descricao{
     display: flex;
+}
+
+.descricao .descricao-curta{
+    width: 120%;
+    height: 300px;
+    padding: 10px;
+    border-right: 1px dotted var(--clr-white);
+    font-family: var(--f-secundary);
+    text-align: justify;
+    line-height: 1.3em;
+}
+.descricao .descricao-longa{
+    font-family: var(--f-secundary);
+    padding: 10px;
+}
+
+.descricao .descricao-longa h3{
+ text-align: left;
+ padding-bottom: 10px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;  
+}
+
+.descricao .descricao-longa p{
+    text-align: justify;
 }
