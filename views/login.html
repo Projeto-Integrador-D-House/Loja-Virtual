@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../public/style/login.css">
+    
     <title>64 Ganes - Login</title>
 </head>
 <body>
     <main class="login">
+        <h3 class="titulo-login">Login</h3>
+        <div class="novo-login">
+            <h5>Novo por aqui? <a href=""> Registre-se</a></h5>
+        </div>
         <form action="" class="login-entrar">
-            <h3 class="titulo-login">Login</h3>
-            <label for="email">E-mail</label>
+            <label for="email">E-mail:</label>
             <input type="email" name="email" id="email">
-            <label for="senha">Senha</label>
+            <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha">
-            <small>Esqueceu a senha?</small>
-            <button type="submit">Fazer Login</button>
+            <small><a href="http://"> Esqueceu a senha?</a></small>
+            <button class="btn-login" type="submit">Fazer Login</button>
         </form>
 
         <div class="login-externo">
@@ -29,9 +35,7 @@
             </div>
         </div>
 
-        <div class="novo-login">
-            <h5>Novo por aqui <a href="">Registre-se</a></h5>
-        </div>
+        
     </main>
 </body>
 </html>
