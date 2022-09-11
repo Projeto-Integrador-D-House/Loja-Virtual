@@ -77,5 +77,44 @@ main{
     font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: bold;
+}
+.login-externo{
+    width: 100%;
+    font-family: var(--f-primary);
+    font-weight: 500;
+}
+.login-externo .titulo-login__externo{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0;
+}
+.login-externo .titulo-login__externo .texto-login__externo{
+    text-align: center;
 }
 
+.login-externo .login-facebook, .login-externo .login-google{
+    text-align: center;
+}
+.login-externo .login-facebook button{
+    background-color: #3b5998;
+    padding: 3px;
+    margin-bottom: 8px;
+    width: 45%;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-externo .login-google button{
+    background-color: #34A853;
+    padding: 3px;
+    margin-bottom: 8px;
+    width: 45%;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+
+}
