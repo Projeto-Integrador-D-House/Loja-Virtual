@@ -94,16 +94,7 @@ main .imagem-produto img{
 }
 
 .container-descricao .quantidade-produto button{
-    background-color: var(--clr-green);
-    padding: 10px;
-    font-family: var(--f-secundary);
-    text-transform: uppercase;
-    outline: none;
-    border: 1px solid var(--clr-green);
-    border-radius: 7px;
-
     margin-left: 15px;
-
 }
 
 .descricao{

@@ -28,3 +28,16 @@
     list-style: none;
     color:var(--clr-white)
 }
+
+.btn-comprar{
+    background-color: var(--clr-green);
+    padding: 10px;
+    font-family: var(--f-secundary);
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid var(--clr-green);
+    border-radius: 7px;
+
+    margin-left: 15px;
+    cursor: pointer;
+}
