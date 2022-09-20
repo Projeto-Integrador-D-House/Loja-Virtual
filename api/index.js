@@ -1,8 +1,9 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
+const rotas = require("./rotas");
 
-app.get("/",(req, res)=>{
-    res.send("Pagina Principal")
-})
+app.use("/", rotas);
 
-app.listen(3000,()=>{console.log("servidor rodando...")})
+app.listen(5000, () => {
+  console.log("servidor rodando...");
+});
