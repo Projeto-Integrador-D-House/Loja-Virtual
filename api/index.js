@@ -1,8 +1,18 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
 
-app.get("/",(req, res)=>{
-    res.send("Pagina Principal")
-})
+const sequelize = require('./database')
+const rotas = require("./rotas");
 
-app.listen(3000,()=>{console.log("servidor rodando...")})
+try {
+  sequelize.authenticate();
+  console.log('Connection has been established successfully.');
+} catch (error) {
+  console.error('Unable to connect to the database:', error);
+}
+
+app.use("/", rotas);
+
+app.listen(5000, () => {
+  console.log("servidor rodando...");
+});
