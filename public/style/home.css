@@ -13,8 +13,8 @@
 
 .conteudo-principal .banner-home .img2-banner img{
     position: absolute;
-    bottom: 5px;
-    left: 920px;
+    bottom: 42%;
+    left: 74%;
     width: 250px;
     height: 250px;
     border: 3px solid var(--clr-purple);
@@ -31,8 +31,8 @@
     border: 2px solid var(--clr-purple);
     border-radius: 10px;
     background-color: var(--clr-purple);
-    bottom: 265px;
-    left: 920px;
+    bottom: 65%;
+    left: 73%;
     font-family: var(--f-third);
 }
 
@@ -52,25 +52,25 @@
     padding-bottom: 10px;
 }
 
-.mais-vendidos{
+.mais-vendidos, .categorias{
     margin-top: 50px;
     width: 100%;
 }
-.mais-vendidos .mais-vendidos_titulo{
+.mais-vendidos .mais-vendidos_titulo, .categorias .categorias_titulo{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
    background-color: var(--clr-opacity-black); 
 }
-.mais-vendidos .mais-vendidos_titulo .mais-vendidos_titulo_nome h3{
+.mais-vendidos .mais-vendidos_titulo .mais-vendidos_titulo_nome h3, .categorias .categorias_titulo .categorias_titulo_nome h3{
     font-family: var(--f-primary);
     font-weight: 400;
     font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-.mais-vendidos .mais-vendidos_produtos{
+.mais-vendidos .mais-vendidos_produtos, .categorias .categorias_produtos{
     display: flex;
     margin: 10px;
     justify-content: space-around;
@@ -80,7 +80,7 @@
     width: 218px;
 }
 
-.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 p{
+.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 p, .categorias .categorias_produtos .categoria_produtos_1 p{
     font-family: var(--f-third);
     
 }
@@ -94,3 +94,7 @@
     margin-top: 10px;
 }
 
+.categorias .categorias_produtos .categoria_produtos_1 img{
+    width: 203px;
+    height: 271px;
+}
