@@ -61,7 +61,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
-   background-color: var(--clr-opacity-black); 
+    background-color: var(--clr-opacity-black); 
 }
 .mais-vendidos .mais-vendidos_titulo .mais-vendidos_titulo_nome h3, .categorias .categorias_titulo .categorias_titulo_nome h3{
     font-family: var(--f-primary);
@@ -72,7 +72,7 @@
 }
 .mais-vendidos .mais-vendidos_produtos, .categorias .categorias_produtos{
     display: flex;
-    margin: 10px;
+    margin: 20px;
     justify-content: space-around;
 }
 
@@ -97,4 +97,32 @@
 .categorias .categorias_produtos .categoria_produtos_1 img{
     width: 203px;
     height: 271px;
+}
+
+.banner-desconto{
+    margin-top: 100px;
+}
+
+.banner-desconto .texto-banner_desconto{
+    position: absolute;
+    top: 1650px;
+    left: 700px;
+    padding: 10px;
+    border: 1px solid var(--clr-purple);
+    border-radius: 10px;
+    background-color: var(--clr-purple);
+    width: 25%;
+    height: 300px;
+}
+
+.banner-desconto .texto-banner_desconto h4 {
+    font-size: 22px;
+    font-family: var(--f-primary);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.banner-desconto .texto-banner_desconto h2{
+    font-size: 60px;
+    font-family: var(--f-primary);
 }
