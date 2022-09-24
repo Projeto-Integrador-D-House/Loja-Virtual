@@ -1,10 +1,23 @@
 const {DataTypes} = require('sequelize')
-const sequelize = require('../index.js')
-console.log('produto')
+
+const sequelize = require('../conection.js')
+
 const produto = sequelize.define('Produto',{
-    nome:{
+    nome: {
         type: DataTypes.STRING
+    },
+    descricao:{
+        type: DataTypes.STRING
+    },
+    EAN: {
+        type: DataTypes.BIGINT({length: 13})
+    },
+    categoria: {
+        type: DataTypes.STRING
+    },
+    preco: {
+        type: DataTypes.FLOAT
     }
 })
-produto.sync({force: true})
+
 module.exports = produto

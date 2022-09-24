@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Projeto-Integrador-D-House/Loja-Virtual#readme",
   "dependencies": {
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
