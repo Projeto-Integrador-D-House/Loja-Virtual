@@ -104,17 +104,18 @@
 
 .banner-desconto{
     margin-top: 100px;
+    width: 100%;
 }
 
 .banner-desconto .texto-banner_desconto{
     position: absolute;
     top: 1650px;
-    left: 700px;
+    left: 30%;
     padding: 10px;
     border: 1px solid var(--clr-purple);
     border-radius: 20px;
     background-color: var(--clr-purple);
-    width: 25%;
+    width: 500px;
     height: 300px;
 }
 
