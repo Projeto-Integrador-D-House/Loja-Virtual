@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
-
+// configuração de conexão com o banco de dados
 const sequelize = require('./database/conection.js')
+// definição de rotas
 const rotas = require("./rotas");
 
+// execução da conexão com o banco de dados
 try {
   sequelize.authenticate();
   sequelize.sync()
@@ -13,6 +15,7 @@ try {
 }
 
 app.use(express.json())
+//rota principal da API
 app.use("/", rotas);
 
 app.listen(5000, () => {
