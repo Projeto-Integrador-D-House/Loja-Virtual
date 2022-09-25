@@ -59,41 +59,41 @@
     margin-top: 50px;
     width: 100%;
 }
-.mais-vendidos .mais-vendidos_titulo, .categorias .categorias_titulo{
+.mais-vendidos .mais-vendidos_titulo, .categorias .categorias_titulo, .banner-desconto .banner-desconto_titulo, .produtos_acessorios .produtos_acessorios_titulo  {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
     background-color: var(--clr-opacity-black); 
 }
-.mais-vendidos .mais-vendidos_titulo .mais-vendidos_titulo_nome h3, .categorias .categorias_titulo .categorias_titulo_nome h3{
+.mais-vendidos .mais-vendidos_titulo .mais-vendidos_titulo_nome h3, .categorias .categorias_titulo .categorias_titulo_nome h3, .banner-desconto .banner-desconto_titulo .banner-desconto_titulo_nome h3, .produtos_acessorios .produtos_acessorios_titulo .produtos_acessorios_titulo_nome h3 {
     font-family: var(--f-primary);
     font-weight: 400;
     font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-.mais-vendidos .mais-vendidos_produtos, .categorias .categorias_produtos{
+.mais-vendidos .mais-vendidos_produtos, .categorias .categorias_produtos, .produtos_acessorios .produtos_acessorios_produtos{
     display: flex;
     margin: 20px;
     justify-content: space-around;
 }
 
-.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 img{
+.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 img, .produtos_acessorios .produtos_acessorios_produtos .produtos_acessorios_produtos_1 img  {
     width: 218px;
 }
 
-.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 p, .categorias .categorias_produtos .categoria_produtos_1 p{
+.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 p, .categorias .categorias_produtos .categoria_produtos_1 p, .produtos_acessorios .produtos_acessorios_produtos .produtos_acessorios_produtos_1 p{
     font-family: var(--f-third);
     
 }
 
-.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 p:nth-child(2){
+.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 p:nth-child(2), .produtos_acessorios .produtos_acessorios_produtos .produtos_acessorios_produtos_1 p:nth-child(2){
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 button{
+.mais-vendidos .mais-vendidos_produtos .mais-vendidos_produtos_1 button,  .produtos_acessorios .produtos_acessorios_produtos .produtos_acessorios_produtos_1 button {
     margin-top: 10px;
 }
 
@@ -103,8 +103,11 @@
 }
 
 .banner-desconto{
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100%;
+}
+.banner-desconto .banner-desconto_jogos {
+    margin-top: 100px;
 }
 
 .banner-desconto .texto-banner_desconto{
