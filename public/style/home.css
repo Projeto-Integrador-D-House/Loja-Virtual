@@ -114,7 +114,7 @@
 .banner-desconto .texto-banner_desconto{
     position: absolute;
     top: 1765px;
-    left: 30%;
+    left: 37%;
     padding: 10px;
     border: 1px solid var(--clr-purple);
     border-radius: 20px;
@@ -135,14 +135,34 @@
     font-family: var(--f-primary);
 }
 
+.banner-desconto_compras {
+    display: inline;
+    position: relative;
+    box-sizing: border-box;
+}
+
 .banner_desconto_compras .banner-desconto_compras_valor img{
     width: 100%;
     height: 400px;
 }
 
+
 .banner_desconto_compras .banner-desconto_compras_valor .texto-banner_desconto_compras{
     position: absolute;
-    bottom: -2450px;
-    left: 35%;
+    top: 3040px;
+    left: 42%;
     z-index: 99;
 }
+
+.banner_desconto_compras .banner-desconto_compras_valor .texto-banner_desconto_compras h2{
+    font-family: var(--f-primary);
+    font-size: 44px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.banner_desconto_compras .banner-desconto_compras_valor .texto-banner_desconto_compras h4{
+    font-family: var(--f-secundary);
+    font-size: 18px;
+}
+
