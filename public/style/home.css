@@ -102,8 +102,9 @@
     height: 271px;
 }
 
-.banner-desconto{
+.banner-desconto, .banner_desconto_compras{
     margin-top: 50px;
+    margin-bottom: 50px;
     width: 100%;
 }
 .banner-desconto .banner-desconto_jogos {
@@ -112,7 +113,7 @@
 
 .banner-desconto .texto-banner_desconto{
     position: absolute;
-    top: 1650px;
+    top: 1765px;
     left: 30%;
     padding: 10px;
     border: 1px solid var(--clr-purple);
@@ -132,4 +133,16 @@
 .banner-desconto .texto-banner_desconto h2{
     font-size: 60px;
     font-family: var(--f-primary);
+}
+
+.banner_desconto_compras .banner-desconto_compras_valor img{
+    width: 100%;
+    height: 400px;
+}
+
+.banner_desconto_compras .banner-desconto_compras_valor .texto-banner_desconto_compras{
+    position: absolute;
+    bottom: -2450px;
+    left: 35%;
+    z-index: 99;
 }
