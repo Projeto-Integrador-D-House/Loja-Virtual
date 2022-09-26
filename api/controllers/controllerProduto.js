@@ -1,5 +1,5 @@
 //importação do modelo de produto
-const produto = require("../database/models/produto.js");
+const produto = require("../database/models/modelProduto.js");
 
 const controllers = {
   //função para listar produtos

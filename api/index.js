@@ -14,6 +14,8 @@ try {
   console.error('Unable to connect to the database:', error);
 }
 
+app.use(express.urlencoded({extended: true}))
+
 app.use(express.json())
 //rota principal da API
 app.use("/", rotas);

@@ -1,13 +1,7 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
+
 const controllers = {
-  autenticar() {
-    const [req, res] = arguments;
-
-    const token = jwt.sign(req.body, process.env.JWT_SECRET);
-
-    res.json(token);
-  },
   verificarToken() {
     const [req, res, next] = arguments;
 
