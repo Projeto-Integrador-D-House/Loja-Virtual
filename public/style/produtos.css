@@ -89,7 +89,7 @@ overflow: hidden;
   grid-area: sidebar;
   grid-column: 1/2;
   grid-row: 2/3;
-
+margin-top: 15px;
 background-color: var(--clr-opacity-black);
 top:0px;
 bottom: 20px;
@@ -406,9 +406,12 @@ grid-template-areas:
   object-fit: cover;
   border-radius: 10px;
 }
-.catalogo-produtos .img-prdutos .p {
+.catalogo-produtos p {
   padding: 3px 10px;
-  color: #0B870B;
+  color: white;
+  font-size: 19px;
+  
+  
   
 
 }
@@ -417,4 +420,7 @@ grid-template-areas:
  
   object-fit: cover;
   border-radius: 10px;
+  height: 300px;
+   
+   
 }
