@@ -64,19 +64,7 @@
 }
 
 
-.container-grid{
-  display: grid;
-  grid-template-columns:
-.2fr 1fr ;
-grid-template-rows:
-8% 62% 30%;
-grid-template-areas:
-"header header " 
-"sidebar catalogo-produtos"
-"footer footer ";
-
-}
-
+/* estilos barra lateral--------*/
 
 .fa-2x {
 font-size: 2em;
@@ -86,8 +74,8 @@ position: relative;
 
 width: 60px;
 height: 36px;
-text-align: center;
-vertical-align: middle;
+text-align:center;
+vertical-align:middle;
 font-size:20px;
 }
 
@@ -108,7 +96,7 @@ bottom: 20px;
 height:100%;
 left:0;
 width:250px;
-overflow:visible;
+overflow:hidden;
 -webkit-transition:width .05s linear;
 transition:width .05s linear;
 -webkit-transform:translateZ(0) scale(1,1);
@@ -146,7 +134,7 @@ display:block;
 width:60px;
 height:36px;
 text-align:center;
-vertical-align: middle;
+vertical-align:baseline;
 font-size:18px;
 }
 
@@ -157,6 +145,7 @@ vertical-align:middle;
 width:190px;
   font-family: 'Titillium Web', sans-serif;
 }
+
 
 .main-menu>ul.logout {
 position:absolute;
@@ -192,7 +181,7 @@ padding:0;
 }
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
-background-color:#5fa2db;
+background-color:var(--clr-purple);
 }
 
 @font-face {
@@ -201,21 +190,8 @@ background-color:#5fa2db;
   font-weight: 300;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
-/* teste css produtos */
-.catalogo-produtos{
-  grid-area: catalogo-produtos;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  display: grid;
-  grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   grid-template-columns: repeat(3, 1fr);
-  
-  
-  
-}
+/* estilos gerais  */
+
 
 .btn_product {
   background: none repeat scroll 0 0 var(--clr-green);
@@ -279,7 +255,7 @@ header nav.header-menu .menu-principal ul li:hover{
   width: 100%;
   overflow: hidden;
 }
-
+/*----------- estilos do footer------*/
 footer {
   grid-area: footer;
   grid-column: 1/3;
@@ -393,28 +369,52 @@ footer div.formas-de-pagamento ul li:nth-child(6){
   margin-left: 10px;
   margin-right: 10px;
 }
+/* -------- galeria de imagens ---------*/
 
-.flex-wrapper{
+.container-grid{
+  display: grid;
+  grid-template-columns:
+.2fr 1fr ;
+grid-template-rows:
+8% 72% 20%;
+grid-template-areas:
+"header header " 
+"sidebar catalogo-produtos"
+"footer footer ";
+
+}
+.catalogo-produtos{
+  grid-area: catalogo-produtos;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  display: grid;
+  grid-column-start: 1;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   grid-template-columns: repeat(3, 1fr);
   
-  padding: 1px 5px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  border: 1px solid red;
+   margin: 20px;
+   gap: 20px;
   
   
 }
 
-.img-prdutos{
-  border: 1px solid red;
-  padding: 0px 5px;
-  
-
-}
-.flex-wrapper *{
- 
-}
-.img-prdutos div img{
+.img-prdutos img{
   width: 100%;
-  margin-top: 5px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.catalogo-produtos .img-prdutos .p {
+  padding: 3px 10px;
+  color: #0B870B;
+  
 
+}
+
+.img-grid__product{
+ 
+  object-fit: cover;
+  border-radius: 10px;
 }
