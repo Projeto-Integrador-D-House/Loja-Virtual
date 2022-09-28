@@ -17,6 +17,10 @@ const usuario = sequelize.define('Usuario',{
     },
     senha: {
         type: DataTypes.STRING
+    },
+    role: {
+        type:DataTypes.STRING,
+        defaultValue: "cliente"
     }
 })
 
