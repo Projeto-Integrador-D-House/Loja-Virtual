@@ -19,9 +19,9 @@ const usuario = sequelize.define('Usuario',{
         type: DataTypes.STRING
     },
     role: {
-        type:DataTypes.STRING,
+        type: DataTypes.STRING,
         defaultValue: "cliente"
     }
-})
+},{timestamps: false})
 
 module.exports = usuario

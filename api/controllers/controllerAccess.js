@@ -7,14 +7,20 @@ const usuario = require("../database/models/modelUsuario.js");
 const controllers = {
   verificarToken() {
     const [req, res, next] = arguments;
-
-    const decode = jwt.verify(req.cookies.userLogged, process.env.JWT_SECRET);
-
-    if (decode === "cliente") {
-      res.status(401).json({ message: "não autorizado" });
-    } else {
-      next();
-      console.log("autorizado");
+    // verifica existencia de cookie registrado
+    if (req.cookies.cliente !== undefined) {
+      // decodifica token encontrado
+      const decode = jwt.verify(req.cookies.cliente, process.env.JWT_SECRET);
+      if (decode.role === "admin") {
+        // usuario tem a permissão de administrador
+        next();
+      } else {
+    // usuario não possui a permissão correta
+        res.json({message: "usuario sem permissão de admin"});
+      }
+    }else{
+      // mensagem caso não tenha feito login
+      res.json({message: "necessario fazer o login"});
     }
   },
   async login() {
@@ -22,25 +28,27 @@ const controllers = {
     // recebe dados para login
     // busca usuario no banco de dados
     const usuarioLogado = await usuario.findByPk(req.body.email);
-    console.log("UL",usuarioLogado.role);
     if (usuarioLogado !== null) {
       // verifica a senha
-      const senhaCorreta = crypto.compare(req.body.senha, usuarioLogado.senha);
-      console.log("SC",senhaCorreta);
+      const senhaCorreta = await crypto.compare(
+        req.body.senha,
+        usuarioLogado.senha
+      );
       if (senhaCorreta) {
         // gera o token
-        const token = jwt.sign(usuarioLogado.role, process.env.JWT_SECRET);
+        const { nome, email, role } = usuarioLogado;
+        const token = jwt.sign({ nome, email, role }, process.env.JWT_SECRET);
         // armazena o token no formato de cookie
-        res.cookie("userLogged", token);
+        res.cookie("cliente", token);
         // redireciona para home
         res.redirect("/");
       } else {
-        res.send("senha incorreta");
+        res.json({message: "senha incorreta"});
       }
     } else {
-      res.send("usuario não existe");
+      res.json({message: "usuario não existe"});
     }
-  }
+  },
 };
 
 module.exports = controllers;

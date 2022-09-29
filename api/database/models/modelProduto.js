@@ -11,11 +11,11 @@ const produto = sequelize.define('Produto',{
         type: DataTypes.STRING
     },
     EAN: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(13),
         unique: true
     },
     categoria: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
     },
     preco: {
         type: DataTypes.FLOAT,

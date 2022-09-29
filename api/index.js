@@ -4,8 +4,9 @@ const app = express();
 // configuração de conexão com o banco de dados
 const sequelize = require('./database/conection.js')
 // definição de rotas
-const rotas = require("./rotas");
-
+const rotasPublica = require("./rotas/rotasPublica");
+const rotasAdmin = require("./rotas/rotasAdmin");
+const controllersAccess = require("./controllers/controllerAccess")
 // execução da conexão com o banco de dados
 try {
   sequelize.authenticate();
@@ -19,7 +20,9 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParse())
 app.use(express.json())
 //rota principal da API
-app.use("/", rotas);
+app.use("/", rotasPublica);
+app.use("/admin", controllersAccess.verificarToken ,rotasAdmin);
+
 
 app.listen(5000, () => {
   console.log("servidor rodando...");
