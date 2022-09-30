@@ -39,6 +39,16 @@ const controllers = {
     }else{
       res.json({message: "produto não existe"})
     }
+  },
+  async excluirProduto(){
+    const [req, res] = arguments;
+    const produtoExcluir = await produto.findByPk(req.params.id);
+    if(produtoExcluir !== null){
+      await produtoExcluir.destroy()
+      res.json({status: "OK"})
+    }else{
+      res.json({message: "produto não existe"})
+    }
   }
 };
 

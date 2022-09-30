@@ -10,12 +10,18 @@ const produto = sequelize.define('Produto',{
     descricao:{
         type: DataTypes.STRING
     },
+    images: {
+        type: DataTypes.ARRAY(DataTypes.STRING)
+    },
     EAN: {
         type: DataTypes.STRING(13),
         unique: true
     },
     categoria: {
         type: DataTypes.STRING,
+    },
+    estoque:{
+        type: DataTypes.INTEGER
     },
     preco: {
         type: DataTypes.FLOAT,

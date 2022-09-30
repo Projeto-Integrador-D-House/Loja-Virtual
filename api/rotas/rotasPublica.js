@@ -1,5 +1,6 @@
 const express = require("express");
 // importação dos controladores
+const controllersVenda = require("../controllers/controllerVenda");
 const controllersProdutos = require("../controllers/controllerProduto");
 const controllersUsuario = require("../controllers/controllersUsuario");
 const controllersAccess = require("../controllers/controllerAccess");
@@ -12,6 +13,7 @@ rotas.get("/", function(req, res) {
     }
 );
 
+rotas.post("/pedido", controllersVenda.fazerPedido)
 // rota para listar os Produtos
 rotas.get("/produtos", controllersProdutos.listarProdutos);
 // rota para listar um Produto pela id

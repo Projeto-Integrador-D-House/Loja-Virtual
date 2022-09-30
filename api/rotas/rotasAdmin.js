@@ -14,5 +14,7 @@ rotas.post("/produtos/novo", controllersProdutos.novoProduto);
 // rota para editar produto
 rotas.patch("/produto/:id/editar", controllersProdutos.editarProduto)
 
+rotas.delete("/produto/:id", controllersProdutos.excluirProduto)
+
 module.exports = rotas;
  
