@@ -46,7 +46,7 @@ const controllers = {
         res.json({message: "senha incorreta"});
       }
     } else {
-      res.json({message: "usuario não existe"});
+      res.status(401).json({message: "usuario não existe"});
     }
   },
 };

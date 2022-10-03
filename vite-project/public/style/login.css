@@ -1,0 +1,120 @@
+@import './main.css';
+
+body{
+    background-color: var(--clr-dark-blue);
+}
+
+main{
+    background-color: var(--clr-opacity-black);
+    margin-top: 15% auto;
+    margin: 10% auto;
+    width: 50%;
+    border: 2px solid var(--clr-purple);
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: var(--clr-purple);    
+}
+
+.login .titulo-login{
+    font-family: var(--f-primary);
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.login .novo-login{
+    font-family: var(--f-secundary);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.login .novo-login h5{
+    font-weight: 500;
+}
+
+.login .novo-login h5 a{
+    color: var(--clr-purple);
+}
+
+.login-entrar{
+    font-family: var(--f-secundary);
+    padding: 10px;
+}
+
+.login-entrar label{
+    display: block;
+    padding-top: 10px;
+}
+
+.login-entrar input{
+    width: 100%;
+    height: 35px;
+    background:none;
+    border:none;
+    border-bottom: 2px solid var(--clr-purple);
+    outline: none;    
+}
+
+.login-entrar small{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    
+}
+.login-entrar small a{
+    color: var(--clr-purple);
+}
+
+.login-entrar .btn-login{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 10x;
+    background-color: var(--clr-purple);
+    outline: none;
+    border-color: var(--clr-purple);
+    font-family: var(--f-secundary);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.login-externo{
+    width: 100%;
+    font-family: var(--f-primary);
+    font-weight: 500;
+}
+.login-externo .titulo-login__externo{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0;
+}
+.login-externo .titulo-login__externo .texto-login__externo{
+    text-align: center;
+}
+
+.login-externo .login-facebook, .login-externo .login-google{
+    text-align: center;
+}
+.login-externo .login-facebook button{
+    background-color: #3b5998;
+    padding: 3px;
+    margin-bottom: 8px;
+    width: 45%;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-externo .login-google button{
+    background-color: #34A853;
+    padding: 3px;
+    margin-bottom: 8px;
+    width: 45%;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+
+}

@@ -9,7 +9,6 @@ const controllers = {
 
     const senhaHashed = await crypto.hash(senha, 10);
 
-    console.log(senhaHashed)
     let usuarioCriado;
     try {
       usuarioCriado = await usuario.create({

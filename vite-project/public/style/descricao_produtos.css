@@ -1,0 +1,128 @@
+@import './main.css';
+@import './header_footer.css';
+
+main .container-descricao{
+    display: flex;
+    margin: 25px 450px;
+    align-items: center;
+}
+
+main .img-pequenas{
+    margin-right: 20px;
+}
+
+main .img-pequenas ul li:nth-child(2){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .img-pequenas img{
+   width: 55px;
+   height: 55px;
+   border-radius: 5px;
+}
+
+main .imagem-produto img{
+    width: 700px;
+    height: 450px;
+}
+
+.container-descricao .nome-produto {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.container-descricao .nome-produto h3, .container-descricao .nome-produto small{
+    font-family: var(--f-primary);
+    padding-bottom: 13px;
+}
+
+.container-descricao .nome-produto h3{
+    font-size: 42px;
+}
+.container-descricao .nome-produto small{
+    font-size: 10px;
+}
+
+.preco-produto{
+    position: relative;
+    margin-top: 10px;
+    font-family: var(--f-secundary);
+    font-size: 16px;
+    top: 25px;
+}
+
+.preco-produto .preco-normal{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.preco-produto .preco-normal h4{
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.preco-produto .preco-promocional{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    
+}
+
+.preco-produto .preco-promocional h4{
+    margin-left: 5px;
+}
+
+.preco-produto .preco-promocional h4 , .preco-produto .preco-promocional h5{
+    color: var(--clr-green);
+}
+
+.container-descricao .quantidade-produto label{
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.container-descricao .quantidade-produto input{
+    background-color: var(--clr-black);
+    border: 1px solid var(--clr-white);
+    font-family: var(--f-secundary);
+    border-radius: 5px;
+    padding: 6px;
+    width: 49px;
+    outline: none;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.container-descricao .quantidade-produto button{
+    margin-left: 15px;
+}
+
+.descricao{
+    display: flex;
+}
+
+.descricao .descricao-curta{
+    width: 120%;
+    height: 300px;
+    padding: 10px;
+    border-right: 1px dotted var(--clr-white);
+    font-family: var(--f-secundary);
+    text-align: justify;
+    line-height: 1.3em;
+}
+.descricao .descricao-longa{
+    font-family: var(--f-secundary);
+    padding: 10px;
+}
+
+.descricao .descricao-longa h3{
+ text-align: left;
+ padding-bottom: 10px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;  
+}
+
+.descricao .descricao-longa p{
+    text-align: justify;
+}
