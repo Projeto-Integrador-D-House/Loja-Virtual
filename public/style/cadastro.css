@@ -50,6 +50,7 @@ body {
     width: 100%;
     padding: 0.625rem;
     font-size: 0.875rem;
+    color: var(--clr-black);
 }
 .form-control input:focus {
     outline: 0;
@@ -90,5 +91,6 @@ body {
     background-color: var(--clr-purple);
     border: 0.05rem solid var(--clr-purple);
     border-radius: 2%;
+    margin-left: 0;
 
 }
