@@ -4,8 +4,9 @@
   "description": "Loja Virtual de Games",
   "main": "index.js",
   "scripts": {
-    "start": "node ./api/index.js",
-    "dev": "nodemon ./api/index.js"
+    "dev": "concurrently \"npm run back:dev \" \"npm run front:dev\"",
+    "back:dev": "nodemon ./api/index.js",
+    "front:dev": "vite"
   },
   "repository": {
     "type": "git",
@@ -18,17 +19,25 @@
   "homepage": "https://github.com/Projeto-Integrador-D-House/Loja-Virtual#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "concurrently": "^7.4.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.4.1",
+    "react-router-dom": "^6.4.1",
     "sequelize": "^6.23.0",
-    "uuid": "^9.0.0",
-    "vite": "^3.1.4"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^1.0.2",
+    "nodemon": "^2.0.20",
+    "vite": "^3.1.4"
   }
 }

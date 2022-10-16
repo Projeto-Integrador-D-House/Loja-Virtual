@@ -1,6 +1,6 @@
 @import './main.css';
 
-body {
+/* body {
     background-image: linear-gradient(to right,#33363F, #1C2D48, #1C2D48, #33363F);
     font-family: var(--f-secundary);
     display: flex;
@@ -8,7 +8,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-}
+} */
 
 .container{
     background-color: #1C2D48;
@@ -44,6 +44,7 @@ body {
 }
 
 .form-control input{
+    color: black;
     border: 0.125rem;
     border-radius: 0.25rem;
     display: block;
@@ -92,3 +93,6 @@ body {
     border-radius: 2%;
 
 }
+
+.form button:disabled{
+cursor: not-allowed;}

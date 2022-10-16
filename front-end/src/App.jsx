@@ -2,7 +2,8 @@ import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import Home from "./pages/home";
+import Home from "./pages/Home";
+import Cadastro from "./pages/Cadastro";
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
             index
             element={<Home />}
           />
+        <Route
+          path="/login"
+          element={<Cadastro />} />
         </Route>
       </Routes>
     </div>
