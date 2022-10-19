@@ -20,8 +20,8 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParse())
 app.use(express.json())
 //rota principal da API
-app.use("/", rotasPublica);
-app.use("/admin", controllersAccess.verificarToken ,rotasAdmin);
+app.use("/api", rotasPublica);
+app.use("/api/admin", controllersAccess.verificarToken ,rotasAdmin);
 
 
 app.listen(5000, () => {
