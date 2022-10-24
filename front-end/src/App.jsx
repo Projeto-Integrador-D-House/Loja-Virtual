@@ -5,6 +5,7 @@ import Header from "./layout/Header";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -23,6 +24,12 @@ export default function App() {
           element={<Cadastro />} 
           
           />
+
+        <Route
+          path="/login"
+          element={<Login/>} 
+          
+        />
 
         <Route
           path="/descricaoProduto"

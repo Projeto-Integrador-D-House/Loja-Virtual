@@ -4,11 +4,10 @@ body{
     background-color: var(--clr-dark-blue);
 }
 
-main{
+main.login{
     background-color: var(--clr-opacity-black);
-    margin-top: 15% auto;
-    margin: 10% auto;
-    width: 50%;
+    margin: 20px auto;
+    width: 35%;
     border: 2px solid var(--clr-purple);
     border-radius: 10px;
     outline-style: solid;
@@ -44,6 +43,7 @@ main{
 .login-entrar label{
     display: block;
     padding-top: 10px;
+    text-align: left;
 }
 
 .login-entrar input{
