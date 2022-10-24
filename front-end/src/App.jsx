@@ -19,7 +19,7 @@ export default function App() {
             element={<Home />}
           />
         <Route
-          path="/login"
+          path="/cadastro"
           element={<Cadastro />} 
           
           />
