@@ -247,7 +247,7 @@ return (<>
             <div className="container-home-newsletter">
                 <h2 className="texto_home-newsletter">Quer ser o primeiro a saber dos lançamentos e promoções?</h2>
                 <h3 className="subtexto_home-newsletter">Inscreva-se aqui!! </h3>
-                <form action="" className="form_newsletter">
+                <form className="form_newsletter">
                     <input className="email_newsletter" type="email" placeholder="Cadastre seu e-mail aqui?"/>
                     <button type="submit" className="btn-newsletter">Enviar</button>
                 </form>

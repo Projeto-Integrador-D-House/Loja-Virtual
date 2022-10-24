@@ -4,6 +4,7 @@ import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
+import DescricaoProduto from "./pages/DescricaoProduto";
 
 export default function App() {
   return (
@@ -19,7 +20,14 @@ export default function App() {
           />
         <Route
           path="/login"
-          element={<Cadastro />} />
+          element={<Cadastro />} 
+          
+          />
+
+        <Route
+          path="/descricaoProduto"
+          element={<DescricaoProduto/>} 
+          />
         </Route>
       </Routes>
     </div>

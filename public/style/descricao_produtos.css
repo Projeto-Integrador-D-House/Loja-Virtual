@@ -1,6 +1,7 @@
 @import './main.css';
 @import './header_footer.css';
 
+
 main .container-descricao{
     display: flex;
     margin: 25px 450px;
@@ -9,6 +10,8 @@ main .container-descricao{
 
 main .img-pequenas{
     margin-right: 20px;
+    
+    
 }
 
 main .img-pequenas ul li:nth-child(2){
