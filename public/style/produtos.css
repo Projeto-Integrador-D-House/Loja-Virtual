@@ -372,18 +372,16 @@ footer div.formas-de-pagamento ul li:nth-child(6){
 /* -------- galeria de imagens ---------*/
 
 .container-grid{
-  display: grid;
-  grid-template-columns:
-.2fr 1fr ;
-grid-template-rows:
-8% 72% 20%;
+display: grid;
+grid-template-columns:.2fr 1fr ;
+grid-template-rows: 8% 72% 20%;
 grid-template-areas:
 "header header " 
 "sidebar catalogo-produtos"
 "footer footer ";
 
 }
-.catalogo-produtos{
+#catalogo-produtos{
   grid-area: catalogo-produtos;
   grid-column: 2/4;
   grid-row: 2/3;
@@ -406,7 +404,7 @@ grid-template-areas:
   object-fit: cover;
   border-radius: 10px;
 }
-.catalogo-produtos p {
+#catalogo-produtos p {
   padding: 3px 10px;
   color: white;
   font-size: 19px;

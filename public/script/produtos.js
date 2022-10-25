@@ -98,3 +98,37 @@ const produtos = [
         descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur accusantium nulla maiores quis. Quasi quo possimus exercitationem, repudiandae voluptatum odio magnam quam"
     }
 ];
+
+const produtosContainer = document.querySelector('#catalogo-produtos');
+
+const formatter = Intl.NumberFormat('pt-BR',{
+    style: 'currency',
+    currency: 'BRL',
+    maximumFractionDigits:2,
+})
+
+function render(produto){
+    let lista = "";
+
+        produtos.forEach((produto) => {
+           lista += `<div class="flex-wrapper-1">
+           <div class="img-produtos">
+                          <div>
+                               <img class= "img-grid__product" src="${produto.img}" alt="">
+                               <p>${produto.title}</p>
+                               <p>${formatter.format(produto.preco)}</p>
+                               <button class="btn-comprar">
+                                   <span >Adicionar ao carrinho</span>
+                                   </button>
+                         </div>
+                           
+           </div>`
+        });
+
+        produtosContainer.innerHTML= lista
+    };
+    
+    render();
+    
+
+    
