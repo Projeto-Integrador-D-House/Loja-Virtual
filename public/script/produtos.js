@@ -54,7 +54,7 @@ const produtos = [
         title: "Minecraft",
         categoria: "jogos",
         preco: 229.99,
-        img: '../public/image/produto_7.webp',
+        img: '../public/image/produto_7.jpg',
         descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur accusantium nulla maiores quis. Quasi quo possimus exercitationem, repudiandae voluptatum odio magnam quam"
     },
     {
@@ -62,7 +62,7 @@ const produtos = [
         title: "Witcher 2",
         categoria: "jogos",
         preco: 175.99,
-        img: '../public/image/produto_8.webp',
+        img: '../public/image/produto_8.jpg',
         descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur accusantium nulla maiores quis. Quasi quo possimus exercitationem, repudiandae voluptatum odio magnam quam"
     },
     {
@@ -111,18 +111,17 @@ function render(produto){
     let lista = "";
 
         produtos.forEach((produto) => {
-           lista += `<div class="flex-wrapper-1">
-           <div class="img-produtos">
-                          <div>
-                               <img class= "img-grid__product" src="${produto.img}" alt="">
-                               <p>${produto.title}</p>
-                               <p>${formatter.format(produto.preco)}</p>
-                               <button class="btn-comprar">
-                                   <span >Adicionar ao carrinho</span>
-                                   </button>
-                         </div>
-                           
-           </div>`
+           lista += `<article class="listaProdutos">
+           <img src='${produto.img}' class="produto-img" alt='${produto.title}'>
+           <div class="titulo-preco">
+               <section>
+                   <h4 class="nome-produto">${produto.title}</h4>
+                   <h4 class="preco">${formatter.format(produto.preco)}</h4>
+               <section>
+               
+                           <button type="submit" class="btn-comprar">compar</button>
+           </div>
+           </article>`
         });
 
         produtosContainer.innerHTML= lista

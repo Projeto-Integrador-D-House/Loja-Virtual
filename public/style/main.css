@@ -26,7 +26,12 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    color:var(--clr-white)
+    color:var(--clr-white);
+}
+body{
+    background-color: var(--clr-dark-blue);
+    width: 100%;
+    margin: 0 auto;
 }
 
 .btn-comprar{
