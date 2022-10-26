@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>64 Games  - Carrinho</title>
 </head>
 <body>
     
-    
+    <main id="container-carrinho">
+        <div id="conteudo-carrinho">
+            <h2>Meu Carrinho</h2>
+
+            <table id="carrinho-item">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            Item
+                        </th>
+                        <th>
+                            Preço
+                        </th>
+                        <th>
+                            Quantidade
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="produtos-carrinho">
+                    <td class="image">
+                        <img src="../public/image/acessorio_1.webp" alt="Acessorio - teclado" class="cover">
+                    </td>
+
+                    <td>
+                        <div class="produto-item">
+                            <a href="#" class="produto-link"> Teclado Game - RGBA </a>
+                            <a href="#" class="fabricante-link">XXXX</a>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="presente">
+                            <label for="gift">Embalagem para presente</label>
+                        </div>
+                        <div>
+                            <a href="#" class="delete-item">Tirar do carrinho</a>
+                        </div>
+                    </td>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
 
 </body>
 </html>
