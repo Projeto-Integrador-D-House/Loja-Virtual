@@ -1,3 +1,4 @@
+const path =require('path')
 const express = require("express");
 const cookieParse = require("cookie-parser")
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.json())
 app.use("/api", rotasPublica);
 app.use("/api/admin", controllersAccess.verificarToken ,rotasAdmin);
 
+app.use(express.static(path.join(__dirname, 'static')))
 
 app.listen(5000, () => {
   console.log("servidor rodando...");

@@ -19,7 +19,7 @@ const controllers = {
         senha: senhaHashed,
 
       });
-      res.status(201).json(usuarioCriado);
+      res.status(201);
     } catch (e) {
       res.status(400).json(e.errors);
     }

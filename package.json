@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "concurrently \"npm run back:dev \" \"npm run front:dev\"",
     "back:dev": "nodemon ./api/index.js",
-    "front:dev": "vite"
+    "front:dev": "vite",
+    "build": "vite build",
+    "start": "node api/index.js"
   },
   "repository": {
     "type": "git",

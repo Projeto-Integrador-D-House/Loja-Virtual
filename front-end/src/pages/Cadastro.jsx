@@ -11,7 +11,7 @@ let error = senha !== senhaC
 return (
 
 <div className="container">
-        <form id="form" action="/api/registrar" method="post" className="form">
+        <form id="form" action="/api/cadastro" method="post" className="form">
             
             <h2>Faça seu cadastro conosco!</h2>
             

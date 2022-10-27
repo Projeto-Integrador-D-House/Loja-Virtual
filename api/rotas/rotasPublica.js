@@ -19,7 +19,7 @@ rotas.get("/produtos", controllersProdutos.listarProdutos);
 // rota para listar um Produto pela id
 rotas.get("/produto/:id", controllersProdutos.buscarProduto);
 // rota de registro de usuarios
-rotas.post("/registrar", controllersUsuario.cadastrarUsuario);
+rotas.post("/cadastro", controllersUsuario.cadastrarUsuario);
 
 rotas.post("/login", controllersAccess.login)
 
