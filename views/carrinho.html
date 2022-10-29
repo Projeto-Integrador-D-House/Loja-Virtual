@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../public/style/carrinho.css">
+
     <title>64 Games  - Carrinho</title>
 </head>
 <body>
@@ -45,10 +48,48 @@
                             <a href="#" class="delete-item">Tirar do carrinho</a>
                         </div>
                     </td>
-
+                    <td class="small">
+                        <div class="preco">R$ 99,90</div>
+                    </td>
+                    <td class="small">
+                        <input class="quantidade" type="number" value="1" size="2" maxlength="2" min="1" max="10" step="1">
+                    </td>
+                </tr>
+                
                 </tbody>
             </table>
         </div>
+
+        <div class="resumo-compra">
+            <h3>Resumo do Pedido</h3>
+
+            <table id="carrinho-item">
+               <td>
+                    <div>
+                        <p>Subtotal:</p>
+                        <p>R$99,90</p>
+                    </div>
+                    
+                    <div>
+                        <p>Frete:</p>
+                        <p>R$99,90</p>
+                    </div>  
+                    <div>
+                        <p>Desconto do Cupom:</p>
+                        <p> - R$10,00</p>
+                    </div>
+               </td>
+               <tr class="footer">
+    
+                <td>Total de compra</td>
+                <td>
+                    <div id="total">R$ 189,70</div>
+                </td>
+               
+            </tr>
+            </table>
+        </div>
+
     </main>
 
 </body>
