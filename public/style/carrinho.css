@@ -15,6 +15,7 @@ body{
 
 #conteudo-carrinho{
     width: 70%;
+    margin-top: 25px;
 }
 
 #container-carrinho h2{
@@ -35,7 +36,7 @@ table#carrinho-item th{
 
 th, td {
     padding: 0.5rem;
-    border-bottom: #ccd 1px dotted;
+    border-bottom: #ccd 1px solid;
 }
 
 th.small, tr.produtos-carrinho td.small{
@@ -54,7 +55,7 @@ div.preco, #total{
 
 #total{
     font-size: 1.25em;
-    color: var(--clr-green);
+    color: var(--clr-white);
     font-weight: 700;
 }
 tr.produtos-carrinho{
@@ -95,10 +96,89 @@ td .quantidade {
     padding: 5px;
     text-align: center;
     border-radius: 10px;
+    border: 1px solid var(--clr-white);
     outline-color: var(--clr-dark-blue);
 }
 
 div.resumo-compra{
-    margin-top: 35px;
+    margin-top: 65px;
 }
 
+.resumo-compra h3{
+    font-family: var(--f-secundary);
+}
+
+table#pedidos{
+    border-top: 1px solid var(--clr-white);
+}
+
+#pedidos td{
+    border: none;
+}
+
+#pedidos .footer td{
+    border-top: 1px solid var(--clr-white);
+}
+
+section#incluso-pedido{
+  margin-top: 55px;
+  float: right;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+
+div#cupom-desconto, div#calcular-frete{
+    margin-top: 15px;
+    margin-left: 25px;
+    
+}
+
+#cupom-desconto label, #calcular-frete label{
+    display: block;
+    font-family: var(--f-secundary);
+    font-size: 17px;
+}
+
+#cupom-desconto input, #calcular-frete input{
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    color: var(--clr-dark-blue);
+    border-radius: 10px 0px 0px 10px;
+    outline:none;
+    margin-right: 0px;
+    border: 1px solid var(--clr-white);
+}
+
+#cupom-desconto .btn-geral, #calcular-frete .btn-geral{
+    position: relative;
+    width: 22%;
+    height: 30px;
+    padding: 5px;
+    margin-left: 0px;
+    border-radius: 0px 10px 10px 0px;
+    right: 4.5px;
+    top:1px
+}
+
+#calcular-frete .btn-geral{
+    top:0px;
+}
+
+#calcular-frete small{
+    display: block;
+}
+
+section.btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+.btn .btn-geral {
+    width: 25%;
+}
+.btn .btn-comprar{
+    width: 25%;
+}

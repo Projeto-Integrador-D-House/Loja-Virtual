@@ -63,34 +63,64 @@
         <div class="resumo-compra">
             <h3>Resumo do Pedido</h3>
 
-            <table id="carrinho-item">
+            <table id="pedidos">
                <td>
-                    <div>
-                        <p>Subtotal:</p>
-                        <p>R$99,90</p>
-                    </div>
-                    
-                    <div>
-                        <p>Frete:</p>
-                        <p>R$99,90</p>
-                    </div>  
-                    <div>
-                        <p>Desconto do Cupom:</p>
-                        <p> - R$10,00</p>
-                    </div>
-               </td>
+                    <p class="subtotal">Subtotal:</p>
+                </td>
+                <td>
+                    <p class="preco-total-itens">R$99,90</p>
+                
+                </td>
+                <tr>
+                    <td>
+                        <p class="frete">Frete:</p>
+                    </td>
+                    <td>
+                        <p class="valor-frete">R$99,90</p>
+                    </td>
+                      
+                </tr>
+                <tr>
+                    <td>
+                        <p class="nome-cupom">Desconto Cupom:</p>
+                    </td>
+                    <td>
+                        <p class="valor-cupom">R$99,90</p>
+                    </td> 
+                </tr>
+    
                <tr class="footer">
     
-                <td>Total de compra</td>
-                <td>
-                    <div id="total">R$ 189,70</div>
-                </td>
+                    <td>Total de compra</td>
+                    <td>
+                        <div id="total">R$ 189,70</div>
+                    </td>
                
-            </tr>
+                </tr>
             </table>
         </div>
-
     </main>
 
+    <section id="incluso-pedido">
+        <div id="cupom-desconto">
+            <label for="codigo-desconto">Insira o código promocional</label>
+            <input type="text" name="codigo-desconto" id="cod-desconto">
+            <button type="submit" class="btn-geral">Enviar</button>
+        </div>
+
+        <div id="calcular-frete">
+            <label for="info-cep">Informe seu CEP:</label>
+            <input type="text" name="info-cep" id="cod-cep">
+            <button type="submit" class="btn-geral">Enviar</button>
+            <small><a href="#">Não sabe o CEP, Clique aqui!</a></small>
+        </div>
+    </section>
+
+    <section class="btn">
+
+        <button class="btn-geral">Continuar Comprando</button>
+        <button class="btn-comprar">Finalizar Compra</button>
+
+    </section>
 </body>
 </html>
