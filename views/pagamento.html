@@ -4,88 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../public/style/pagamento.css">
+
     <title>64 Games - Pagamento</title>
 </head>
 <body>
-    <div class="endereco-entrega">
-        <form action="">
-            <h2>Endereço para Entrega</h2>
-            <label for="endereco-cep">CEP:</label>
-            <input type="text" name="endereco-cep" id="">
-            <small>Não sei meu CEP</small>
+    <main class="pagamento">
+        <div class="endereco-entrega">
+            <form action="">
+                <h2>Endereço para Entrega</h2>
 
-            <label for="endereco-rua">Rua:</label>
-            <input type="text" name="endereco-rua" id="">
+                <label for="endereco-cep">CEP:</label>
+                <input type="text" name="endereco-cep" id="">
+                <small>Não sei meu CEP</small>
 
-            <label for="endereco-numero">Número:</label>
-            <input type="text" name="endereco-cep" id="">
+                <label for="endereco-rua">Rua:</label>
+                <input type="text" name="endereco-rua" id="">
 
-            <label for="endereco-complemento">Complemento:</label>
-            <input type="text" name="endereco-complemento" id="">
+                <label for="endereco-numero">Número:</label>
+                <input type="text" name="endereco-cep" id="">
 
-            <label for="endereco-bairro">Bairro:</label>
-            <input type="text" name="endereco-bairro" id="">
+                <label for="endereco-complemento">Complemento:</label>
+                <input type="text" name="endereco-complemento" id="">
 
-            <label for="endereco-estado">Estado:</label>
-            <input type="text" name="endereco-estado" id="">
-           
-            <label for="endereco-cidade">Cidade:</label>
-            <input type="text" name="endereco-Cidade" id="">
+                <label for="endereco-bairro">Bairro:</label>
+                <input type="text" name="endereco-bairro" id="">
+
+                <label for="endereco-estado">Estado:</label>
+                <input type="text" name="endereco-estado" id="">
             
-            <button>Enviar</button>
-        </form>
-    </div>
+                <label for="endereco-cidade">Cidade:</label>
+                <input type="text" name="endereco-Cidade" id="">
+                
+                <button class="btn-geral">Enviar</button>
+            </form>
+        </div>
 
-    <div class="escolha-entrega">
-        <form action="">
-            <h2>Escolha a forma de entrega</h2>
-            <input type="checkbox" name="sedex" id="">
-            <label for="sedex">Sedex</label>
-            <small>Grátis</small>
-            <small>13 dias úteis</small>
+        <div class="escolha-entrega">
+            <form action="">
+                <h2>Escolha a forma de entrega</h2>
+                <input type="checkbox" name="sedex" id="">
+                <label for="sedex">Sedex</label>
+                <small>Grátis</small>
+                <small>13 dias úteis</small>
 
-            <input type="checkbox" name="pac" id="">
-            <label for="pac">PAC</label>
-            <small>R$ 16,13</small>
-            <small>17 dias úteis</small>
-        </form>
-    </div>
+                <input type="checkbox" name="pac" id="">
+                <label for="pac">PAC</label>
+                <small>R$ 16,13</small>
+                <small>17 dias úteis</small>
+            </form>
+        </div>
 
-    <div class="escolha-pagamento">
-        <form action="">
-            <h2>Escolha a forma de pagamento</h2>
-            <input type="checkbox" name="cartao-credito" id="">
-            <label for="cartao-credito">Cartão de Crédito</label>
-            <small>Grátis</small>
-            <small>13 dias úteis</small>
-            
-            <input type="checkbox" name="pix" id="">
-            <label for="pac">pix</label>
-            <small>R$ 16,13</small>
-            <small>17 dias úteis</small>
+        <div class="escolha-pagamento">
+            <form action="">
+                <h2>Escolha a forma de pagamento</h2>
+                <input type="checkbox" name="cartao-credito" id="">
+                <label for="cartao-credito">Cartão de Crédito</label>
+                <small>Grátis</small>
+                <small>13 dias úteis</small>
+                
+                <input type="checkbox" name="pix" id="">
+                <label for="pac">pix</label>
+                <small>R$ 16,13</small>
+                <small>17 dias úteis</small>
 
-            <input type="checkbox" name="boleto" id="">
-            <label for="pac">Boleto</label>
-            <small>R$ 16,13</small>
-            <small>17 dias úteis</small>
-        </form>
+                <input type="checkbox" name="boleto" id="">
+                <label for="pac">Boleto</label>
+                <small>R$ 16,13</small>
+                <small>17 dias úteis</small>
+            </form>
 
-        <form action="">
+            <form action="">
+                
+                <label for="bandeira-cartao">Escolha a bandeira do seu cartão:</label>
+                <select name="bandeira-cartao" id="">
+                    <option value="">MasterCard</option>
+                    <option value="">Visa</option>
+                    <option value="">Hipercard</option>
+                    <option value="">Elo</option>
+                    <option value="">American Express</option>
+                </select>
 
-            <select name="" id="">
-                <option value="">MasterCard</option>
-                <option value="">Visa</option>
-                <option value="">Hipercard</option>
-                <option value="">Elo</option>
-                <option value="">American Express</option>
-            </select>
+                <label for="numero-cartao">Número do Cartão:</label>
+                <input type="text" name="numero-cartao">
+                
+                <label for="numero-cv">Código de Segurança:</label>
+                <input type="text" name="numero-cv">
 
-            <label for="numero-cartao">Número do Cartão:</label>
-            <input type="text" name="numero-cartao">
+                <label for="numero-nome">Nome (conforme impresso no cartão): </label>
+                <input type="text" name="numero-nome">
 
-        </form>
+                <label for="numero-cpf">CPF (dono do cartão): </label>
+                <input type="text" name="numero-cpf">
 
+                <label for="pagamento-parcelas"> Escolha a quantidade de parcelas:</label>
+                <select name="pagamento-parcelas" id="">
+                    <option value="">1x </option>
+                    <option value="">2x </option>
+                    <option value="">3x </option>
+                    <option value="">4x </option>
+                    <option value="">5x </option>
+                    <option value="">6x </option>
+                    <option value="">7x </option>
+                    <option value="">8x </option>
+                    <option value="">9x </option>
+                    <option value="">10x </option>
+                    <option value="">11x </option>
+                    <option value="">12x </option>
+                    
+                </select>
 
-    </div>
+            </form>
+
+            <button class="btn-comprar">Finalizar Compra</button>
+
+        </div>
+    </main>
 </body>
 </html>
