@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
 import Login from "./pages/Login";
+import CadastroValidação from "./pages/CadastroValidação";
 
 export default function App() {
   return (
@@ -35,6 +36,12 @@ export default function App() {
           path="/descricaoProduto"
           element={<DescricaoProduto/>} 
           />
+         <Route
+          path="/cadastroValidacao"
+          element={<CadastroValidação/>} 
+          
+        />
+
         </Route>
       </Routes>
     </div>
