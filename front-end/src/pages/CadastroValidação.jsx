@@ -6,12 +6,12 @@ import '/public/style/cadastro.css'
 
 function CadastroValidação() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: {
             nome:"",
-            sobronome:"",
+            sobrenome:"",
             dataNascimento:"",
             cpf:"",
             email:"",
@@ -19,9 +19,9 @@ function CadastroValidação() {
 
         validationSchema: yup.object({
             nome:yup.string().required("Campo obrigatório"),
-            sobronome:yup.string().required("Campo obrigatório"),
-            dataNascimento:yup.number().required("Campo obrigatório"),
-            cpf:yup.number("").integer().positive().required("Campo Obrigatório"),
+            sobrenome:yup.string().required("Campo obrigatório"),
+            dataNascimento:yup.date().required("Campo obrigatório"),
+            cpf:yup.string().required("Campo Obrigatório"),
             email:yup.string().email("E-mail inválido").required("O campo é obrigatório"),
 
         }),
@@ -44,7 +44,7 @@ function CadastroValidação() {
          type="text"
          onChange={formik.handleChange}
          onBlur={formik.handleBlur}
-         value={formik.values.firstName}
+         value={formik.values.name}
        />
        {formik.touched.nome && formik.errors.nome ? (
          <div>{formik.errors.nome}</div>
@@ -57,9 +57,9 @@ function CadastroValidação() {
          type="text"
          onChange={formik.handleChange}
          onBlur={formik.handleBlur}
-         value={formik.values.lastName}
+         value={formik.values.sobrenome}
        />
-       {formik.touched.sobrenome && formik.errors.lastName ? (
+       {formik.touched.sobrenome && formik.errors.sobrenome ? (
          <div>{formik.errors.sobrenome}</div>
        ) : null}
 
@@ -68,10 +68,10 @@ function CadastroValidação() {
        <input
          id="dataNascimento"
          name="dataNascimento"
-         type="dataNascimento"
+         type="date"
          onChange={formik.handleChange}
          onBlur={formik.handleBlur}
-         value={formik.values.email}
+         value={formik.values.dataNascimento}
        />
        {formik.touched.dataNascimento && formik.errors.dataNascimento ? (
          <div>{formik.errors.dataNascimento}</div>
@@ -81,10 +81,10 @@ function CadastroValidação() {
        <input
          id="cpf"
          name="cpf"
-         type="cpf"
+         type="string"
          onChange={formik.handleChange}
          onBlur={formik.handleBlur}
-         value={formik.values.email}
+         value={formik.values.cpf}
        />
        {formik.touched.cpf && formik.errors.cpf? (
          <div>{formik.errors.cpf}</div>
