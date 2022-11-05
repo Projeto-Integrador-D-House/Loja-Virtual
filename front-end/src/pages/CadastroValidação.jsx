@@ -15,18 +15,50 @@ function CadastroValidação() {
             dataNascimento:"",
             cpf:"",
             email:"",
+            senha:"",
+            senhaC:"",
+
         },
 
         validationSchema: yup.object({
-            nome:yup.string().required("Campo obrigatório"),
-            sobrenome:yup.string().required("Campo obrigatório"),
-            dataNascimento:yup.date().required("Campo obrigatório"),
-            cpf:yup.string().required("Campo Obrigatório"),
-            email:yup.string().email("E-mail inválido").required("O campo é obrigatório"),
+            nome:yup
+            .string()
+            .required("Campo obrigatório"),
+            
+            sobrenome:yup
+            .string()
+            .required("Campo obrigatório"),
+            
+            dataNascimento:yup
+            .date()
+            .required("Campo obrigatório"),
+            
+            cpf:yup
+            .string()
+            .required("Campo Obrigatório")
+            .matches(/^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/, "CPF inválido"),
+
+            email:yup
+            .string()
+            .email("E-mail inválido")
+            .required("O campo é obrigatório"),
+            
+            senha:yup
+            .string()
+            .required("Digite uma senha")
+            .matches(
+              /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+              "A senha precisa ter 8 carácteres com pelo menos: 1 letra maiúscula, 1 número e 1 carácter especial"
+            ),
+            
+            senhaC: yup
+            .string()
+            .required("Confirme a sua senha")
+            .oneOf([yup.ref('senha'), null], "As senhas precisam ser iguais") 
 
         }),
 
-        onSubmit: valores => {
+        onSubmit: (values) => {
             navigate('/api/cadastro');
         }
 
@@ -101,6 +133,34 @@ function CadastroValidação() {
        />
        {formik.touched.email && formik.errors.email ? (
          <div>{formik.errors.email}</div>
+       ) : null}
+
+       
+       <label htmlFor="senha">Senha:</label>
+       <input
+         id="senha"
+         name="senha"
+         type="password"
+         onChange={formik.handleChange}
+         onBlur={formik.handleBlur}
+         value={formik.values.senha}
+       />
+       {formik.touched.senha && formik.errors.senha ? (
+         <div>{formik.errors.senha}</div>
+       ) : null}
+
+       
+<label htmlFor="senhaC">Confirmação de Senha:</label>
+       <input
+         id="senhaC"
+         name="senhaC"
+         type="password"
+         onChange={formik.handleChange}
+         onBlur={formik.handleBlur}
+         value={formik.values.senhaC}
+       />
+       {formik.touched.senhaC && formik.errors.senhaC ? (
+         <div>{formik.errors.senhaC}</div>
        ) : null}
 
 
