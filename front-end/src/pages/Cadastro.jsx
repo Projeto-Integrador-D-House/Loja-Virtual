@@ -49,6 +49,9 @@ return (
             <button type="submit" className="btn-comprar"  disabled={error}>Enviar</button>
 
         </form>
+
+        
+
     </div>
 
 )

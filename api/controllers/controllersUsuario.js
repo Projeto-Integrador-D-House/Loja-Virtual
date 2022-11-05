@@ -26,6 +26,7 @@ const controllers = {
       res.status(400).json(e.errors);
     }
   },
+  
 };
 
 module.exports = controllers;

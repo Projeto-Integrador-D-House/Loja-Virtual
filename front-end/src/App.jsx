@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
+import  "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
@@ -7,6 +8,7 @@ import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
 import Login from "./pages/Login";
 import CadastroValidação from "./pages/CadastroValidação";
+import AllCollapseExample from "./pages/AllCollapseExample";
 
 export default function App() {
   return (
@@ -35,11 +37,16 @@ export default function App() {
         <Route
           path="/descricaoProduto"
           element={<DescricaoProduto/>} 
-          />
+        />
+         
          <Route
           path="/cadastroValidacao"
           element={<CadastroValidação/>} 
-          
+        />
+
+        <Route
+          path="/testBoot"
+          element={<AllCollapseExample/>} 
         />
 
         </Route>
