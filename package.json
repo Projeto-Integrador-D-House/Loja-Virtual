@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Projeto-Integrador-D-House/Loja-Virtual#readme",
   "dependencies": {
+    "base-64": "^1.0.0",
     "bcrypt": "^5.0.1",
     "bootstrap": "^5.2.2",
     "concurrently": "^7.4.0",
@@ -30,6 +31,9 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
+    "react": "^18.2.0",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-router": "^6.4.1",
     "react-router-dom": "^6.4.1",

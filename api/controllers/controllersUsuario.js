@@ -21,7 +21,7 @@ const controllers = {
         senha: senhaHashed,
 
       });
-      res.status(201);
+      res.status(201).redirect('/');
     } catch (e) {
       res.status(400).json(e.errors);
     }

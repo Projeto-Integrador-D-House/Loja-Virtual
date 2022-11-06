@@ -105,10 +105,10 @@ main .imagem-produto img{
 }
 
 .descricao .descricao-curta{
-    width: 120%;
     height: 300px;
     padding: 10px;
-    border-right: 1px dotted var(--clr-white);
+    margin-left: 450px;
+    border-left: 1px dotted var(--clr-white);
     font-family: var(--f-secundary);
     text-align: justify;
     line-height: 1.3em;

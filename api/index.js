@@ -3,7 +3,7 @@ const express = require("express");
 const cookieParse = require("cookie-parser")
 const app = express();
 // configuração de conexão com o banco de dados
-const sequelize = require('./database/conection.js')
+const sequelize = require('./database/conection-local.js')
 // definição de rotas
 const rotasPublica = require("./rotas/rotasPublica");
 const rotasAdmin = require("./rotas/rotasAdmin");

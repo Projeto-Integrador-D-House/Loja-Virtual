@@ -1,12 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useContext} from 'react'
 import {Link} from 'react-router-dom'
+import {UserContext} from '../App'
 
 const Header = () => {
-    const [user, setUser] = useState("")
-    useEffect(()=>{
-      const userLocal = localStorage.getItem('user_logged')
-      setUser(userLocal)
-    },[])
+    const {user} = useContext(UserContext)
     return (
         <header id="header">
         <div className="header-logo">
@@ -15,10 +12,10 @@ const Header = () => {
         <nav className="header-menu">
             <div className="menu-principal">
                 <ul>
-                    <li><a href="#">Produtos</a></li>
+                    <li><Link to="/produtos">Produtos</Link></li>
                     <li><a href="#">Promoções</a></li>
                     <li><a href="#">Fale Conosco</a></li>
-                    <li><Link to="/login"><i className="fa-solid fa-user"></i>{user ?? ' Login'}</Link></li>
+                    <li><Link to="/login"><i className="fa-solid fa-user"></i>{user?.nome ?? ' Login'}</Link></li>
                     <li><a href="#"><i className="fa-solid fa-bag-shopping"></i></a></li>
                 </ul>
             </div>

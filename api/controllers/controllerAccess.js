@@ -41,7 +41,7 @@ const controllers = {
         // armazena o token no formato de cookie
         res.cookie("cliente", token);
         // redireciona para home
-        res.redirect("/");
+        res.redirect('/')
       } else {
         res.json({message: "senha incorreta"});
       }
