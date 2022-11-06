@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
 import Login from "./pages/Login";
-import CadastroValidação from "./pages/CadastroValidação";
+import CadastroValidacao from "./pages/CadastroValidacao";
 import ProdutoDetalhe from "./pages/ProdutoDetalhe";
 
 export const UserContext = createContext()
@@ -60,13 +60,9 @@ export default function App() {
          
          <Route
           path="/cadastroValidacao"
-          element={<CadastroValidação/>} 
+          element={<CadastroValidacao/>} 
         />
 
-        <Route
-          path="/testBoot"
-          element={<AllCollapseExample/>} 
-        />
         <Route path="/produto/:id" element={<ProdutoDetalhe />} />
         </Route>
       </Routes>
