@@ -1,6 +1,6 @@
 const {DataTypes} = require('sequelize')
 
-const sequelize = require('../conection.js')
+const sequelize = require('../conection-local.js')
 const pedido = require('./modelPedido')
 // definição de modelo de usuarios - colunas e tipos de dados
 const usuario = sequelize.define('Usuario',{

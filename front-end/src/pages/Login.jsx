@@ -1,7 +1,19 @@
-import {Link} from 'react-router-dom'
+import {useContext, useEffect, useState} from 'react'
+import {useCookies} from 'react-cookie'
+import {Link, useNavigate} from 'react-router-dom'
 import "/public/style/login.css"
+import { UserContext } from '../App'
 
 const Login = () => {
+    const {setUser} = useContext(UserContext)
+    const [cookie] = useCookies()
+    const redirect = useNavigate()
+    useEffect(()=>{
+        if(cookie.cliente !== undefined){
+            setUser({nome: 'luiz'})
+            redirect('/')
+        }
+    },[])
     return (
         <>
 
@@ -11,9 +23,9 @@ const Login = () => {
                     <h5>Novo por aqui?<Link to="/cadastro">Registre-se</Link></h5>
                 </div>
                 <form method='post' action='/api/login' className="login-entrar">
-                    <label for="email">E-mail:</label>
+                    <label htmlFor="email">E-mail:</label>
                     <input type="email" name="email" id="email"/>
-                    <label for="senha">Senha:</label>
+                    <label htmlFor="senha">Senha:</label>
                     <input type="password" name="senha" id="senha"/>
                     <small><a href="http://"> Esqueceu a senha?</a></small>
                     <button className="btn-login" type="submit">Entrar</button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ createContext, useState} from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
@@ -7,10 +7,29 @@ import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
 import Login from "./pages/Login";
 import CadastroValidação from "./pages/CadastroValidação";
+import ProdutoDetalhe from "./pages/ProdutoDetalhe";
+
+export const UserContext = createContext()
+
+function UserProvider({children}){
+
+const [user,setUser] = useState(null)
+
+const values = {user, setUser}
+
+  return (
+    <>
+    <UserContext.Provider value={values}>
+      {children}
+    </UserContext.Provider>
+    </>
+  )
+}
+
 
 export default function App() {
   return (
-    <div>
+    <UserProvider>
       <Routes>
         <Route
           path="/"
@@ -41,10 +60,10 @@ export default function App() {
           element={<CadastroValidação/>} 
           
         />
-
+        <Route path="/produto/:id" element={<ProdutoDetalhe />} />
         </Route>
       </Routes>
-    </div>
+    </UserProvider>
   );
 }
 function Layout() {
