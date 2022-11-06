@@ -7,8 +7,9 @@ import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
 import Login from "./pages/Login";
-import CadastroValidacao from "./pages/CadastroValidacao";
+
 import ProdutoDetalhe from "./pages/ProdutoDetalhe";
+import CadastroValidacao from "./pages/CadastroValidacao";
 
 export const UserContext = createContext()
 
@@ -26,8 +27,6 @@ const values = {user, setUser}
     </>
   )
 }
-
-import AllCollapseExample from "./pages/AllCollapseExample";
 
 export default function App() {
   return (

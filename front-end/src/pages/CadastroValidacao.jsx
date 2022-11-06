@@ -7,7 +7,7 @@ import Accordion from "react-bootstrap/Accordion";
 import '/public/style/cadastro.css';
 
 
-function CadastroValidação() {
+function CadastroValidacao() {
 
     const navigate = useNavigate();
 
@@ -324,4 +324,4 @@ function CadastroValidação() {
 
 }
 
-export default CadastroValidação
+export default CadastroValidacao
