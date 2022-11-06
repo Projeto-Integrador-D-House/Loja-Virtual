@@ -1,7 +1,7 @@
 @import './main.css';
 
 
-.container{
+.form{
     
     background-color: #1C2D48;
     font-family: var(--f-secundary);
@@ -31,14 +31,14 @@
     position: relative;
 }
 
-.form-control label {
+.form label {
     text-align: left;
     font-weight: bold;
     display: block;
     margin-bottom: 0.3125rem;
 }
 
-.form-control input{
+.form input{
     color: black;
     border: 0.125rem;
     border-radius: 0.25rem;
@@ -48,12 +48,12 @@
     font-size: 0.875rem;
     color: var(--clr-black);
 }
-.form-control input:focus {
+.form input:focus {
     outline: 0;
     border: #737373 solid 0.125rem;
 }
 
-.form-control.sucesso input {
+.form .sucesso input {
     border:var(--sucesso-cor)  solid 0.125rem;
 }
 
@@ -89,6 +89,15 @@
     border-radius: 2%;
     margin-left: 0;
 
+}
+.accordion-item, .accordion-item button{
+    background-color: var(--clr-dark-blue);
+    border: none;
+}
+
+.accordion-item:focus, .accordion-item button[aria-expanded=true]{
+    background-color: var(--clr-purple);
+    border-color: var(--clr-purple);
 }
 
 .form button:disabled{

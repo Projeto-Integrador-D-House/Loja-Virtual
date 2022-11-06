@@ -1,5 +1,6 @@
 import React,{ createContext, useState} from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
+import  "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
@@ -26,6 +27,7 @@ const values = {user, setUser}
   )
 }
 
+import AllCollapseExample from "./pages/AllCollapseExample";
 
 export default function App() {
   return (
@@ -54,11 +56,16 @@ export default function App() {
         <Route
           path="/descricaoProduto"
           element={<DescricaoProduto/>} 
-          />
+        />
+         
          <Route
           path="/cadastroValidacao"
           element={<CadastroValidação/>} 
-          
+        />
+
+        <Route
+          path="/testBoot"
+          element={<AllCollapseExample/>} 
         />
         <Route path="/produto/:id" element={<ProdutoDetalhe />} />
         </Route>
