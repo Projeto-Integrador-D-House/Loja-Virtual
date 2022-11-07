@@ -1,6 +1,6 @@
 const {DataTypes} = require('sequelize')
 
-const sequelize = require('../conection-local.js')
+const sequelize = require('../conection.js')
 
 const pedido = sequelize.define('Pedido',{
     items: {

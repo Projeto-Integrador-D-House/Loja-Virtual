@@ -1,6 +1,6 @@
 const {DataTypes} = require('sequelize')
 
-const sequelize = require('../conection-local.js')
+const sequelize = require('../conection.js')
 
 // definição de modelo de porduto - colunas e tipos de dados
 const produto = sequelize.define('Produto',{
