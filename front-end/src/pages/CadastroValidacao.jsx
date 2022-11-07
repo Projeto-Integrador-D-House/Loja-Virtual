@@ -6,12 +6,12 @@ import Accordion from "react-bootstrap/Accordion";
 
 import '/public/style/cadastro.css';
 
-
 function CadastroValidacao() {
 
     const navigate = useNavigate();
 
     const formik = useFormik({
+
         initialValues: {
             nome:"",
             sobrenome:"",
@@ -96,10 +96,6 @@ function CadastroValidacao() {
             .required("Campo Obrigatório"),
 
         }),
-
-        url: () => {
-          return `http://viacep.com.br/ws/${this.state.cep}/json/`;
-        },
 
         onSubmit: (values) => {
             navigate('/api/cadastro');
@@ -228,7 +224,7 @@ function CadastroValidacao() {
             <h3>Endereço</h3>
           </Accordion.Header>
           <Accordion.Body>
-          <label htmlFor="cep">CEP:</label>
+            <label htmlFor="cep">CEP:</label>
             <input
               id="cep"
               name="cep"
@@ -236,12 +232,12 @@ function CadastroValidacao() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.cep}
-              />
+            />
             {formik.touched.cep && formik.errors.cep ? (
               <div>{formik.errors.cep}</div>
             ) : null}
 
-<label htmlFor="logradouro">Logradouro:</label>
+            <label htmlFor="logradouro">Logradouro:</label>
             <input
               id="logradouro"
               name="logradouro"
@@ -249,12 +245,12 @@ function CadastroValidacao() {
               value={formik.values.logradouro}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              />
+            />
             {formik.touched.logradouro && formik.errors.logradouro ? (
               <div>{formik.errors.logradouro}</div>
             ) : null}
 
-<label htmlFor="numero">Número:</label>
+            <label htmlFor="numero">Número:</label>
             <input
               id="numero"
               name="numero"
@@ -267,7 +263,7 @@ function CadastroValidacao() {
               <div>{formik.errors.numero}</div>
             ) : null}
 
-<label htmlFor="complemento">Complemento:</label>
+            <label htmlFor="complemento">Complemento:</label>
             <input
               id="complemento"
               name="complemento"
@@ -280,7 +276,7 @@ function CadastroValidacao() {
               <div>{formik.errors.complemento}</div>
             ) : null}
 
-<label htmlFor="bairro">Bairro:</label>
+            <label htmlFor="bairro">Bairro:</label>
             <input
               id="bairro"
               name="bairro"
@@ -292,8 +288,8 @@ function CadastroValidacao() {
             {formik.touched.bairro && formik.errors.bairro ? (
               <div>{formik.errors.bairro}</div>
             ) : null}
-          
-          <label htmlFor="cidade">Cidade:</label>
+
+            <label htmlFor="cidade">Cidade:</label>
             <input
               id="cidade"
               name="cidade"
@@ -306,12 +302,49 @@ function CadastroValidacao() {
               <div>{formik.errors.cidade}</div>
             ) : null}
 
-
-            
+            <label htmlFor="uf">Estado:</label>
+            <select
+              id="uf"
+              name="uf"
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.uf}
+            >
+              <option value={null}>Selecione o Estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+            </select>
           </Accordion.Body>
         </Accordion.Item>
-      
-        
+
+
 
 
 

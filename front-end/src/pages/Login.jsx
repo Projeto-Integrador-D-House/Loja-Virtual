@@ -1,13 +1,13 @@
-import {useContext, useEffect, useState} from 'react'
-import {useCookies} from 'react-cookie'
-import {Link, useNavigate} from 'react-router-dom'
-import "/public/style/login.css"
-import { UserContext } from '../App'
+import {useContext, useEffect, useState} from 'react';
+import {useCookies} from 'react-cookie';
+import {Link, useNavigate} from 'react-router-dom';
+import "/public/style/login.css";
+import { UserContext } from '../App';
 
 const Login = () => {
-    const {setUser} = useContext(UserContext)
-    const [cookie] = useCookies()
-    const redirect = useNavigate()
+    const {setUser} = useContext(UserContext);
+    const [cookie] = useCookies();
+    const redirect = useNavigate();
     useEffect(()=>{
         if(cookie.cliente !== undefined){
             setUser({nome: 'luiz'})

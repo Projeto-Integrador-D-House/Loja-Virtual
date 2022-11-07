@@ -5,7 +5,7 @@ const usuario = require("../database/models/modelUsuario.js");
 const controllers = {
   async cadastrarUsuario() {
     const [req, res] = arguments;
-    const { senha, nome, sobrenome, dataNascimento, cpf, email, role } = req.body;
+    const { senha, nome, sobrenome, dataNascimento, cpf, email, cep, logradouro, numero, complemento, bairro, cidade, uf, role } = req.body;
 
     const senhaHashed = await crypto.hash(senha, 10);
 
@@ -17,6 +17,13 @@ const controllers = {
         dataNascimento,
         cpf,
         email,
+        cep,
+        logradouro,
+        numero,
+        complemento,
+        bairro,
+        cidade,
+        uf,
         role,
         senha: senhaHashed,
 

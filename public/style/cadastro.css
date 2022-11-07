@@ -38,7 +38,7 @@
     margin-bottom: 0.3125rem;
 }
 
-.form input{
+.form input, .form select, .form option{
     color: black;
     border: 0.125rem;
     border-radius: 0.25rem;
