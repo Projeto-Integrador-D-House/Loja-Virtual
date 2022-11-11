@@ -48,6 +48,7 @@ const Footer = () => {
             </ul>
         </div>
         <div className="formas-de-pagamento">
+            
             <h4>Formas de Pagamento</h4>
             <ul>
                 <li>

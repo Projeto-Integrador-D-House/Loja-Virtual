@@ -1,13 +1,14 @@
 import React,{ createContext, useState} from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
+import  "bootstrap/dist/css/bootstrap.min.css";
 
+// Components
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import DescricaoProduto from "./pages/DescricaoProduto";
 import Login from "./pages/Login";
-import  "bootstrap/dist/css/bootstrap.min.css";
 import ProdutoDetalhe from "./pages/ProdutoDetalhe";
 import CadastroValidacao from "./pages/CadastroValidacao";
 import Produtos from "./pages/Produtos";
@@ -81,4 +82,4 @@ function Layout() {
     <Outlet />
     <Footer />
   </>
-};
+}

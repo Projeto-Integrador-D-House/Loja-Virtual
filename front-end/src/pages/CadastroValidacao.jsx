@@ -8,6 +8,25 @@ import '/public/style/cadastro.css';
 
 function CadastroValidacao() {
 
+  function onBlurCep(ev, setFieldValue) {
+    const { value } = ev.target;
+
+    const cep = value?.replace(/[^0-9]/g, '');
+
+    if (cep?.length !== 8) {
+      return;
+    }
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFieldValue('logradouro', data.logradouro);
+        setFieldValue('bairro', data.bairro);
+        setFieldValue('cidade', data.localidade);
+        setFieldValue('uf', data.uf);
+      });
+  };
+
     const navigate = useNavigate();
 
     const formik = useFormik({
@@ -97,7 +116,7 @@ function CadastroValidacao() {
 
         }),
 
-        onSubmit: (values) => {
+        onSubmit: (values, actions) => {
             navigate('/api/cadastro');
         }
 
@@ -230,7 +249,7 @@ function CadastroValidacao() {
               name="cep"
               type="text"
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              onBlur={(ev) => onBlurCep(ev, setFieldValue)}
               value={formik.values.cep}
             />
             {formik.touched.cep && formik.errors.cep ? (
@@ -244,7 +263,7 @@ function CadastroValidacao() {
               type="text"
               value={formik.values.logradouro}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              onBlur={(ev) => onBlurCep(ev, setFieldValue)}
             />
             {formik.touched.logradouro && formik.errors.logradouro ? (
               <div>{formik.errors.logradouro}</div>
@@ -341,6 +360,10 @@ function CadastroValidacao() {
               <option value="TO">Tocantins</option>
               <option value="EX">Estrangeiro</option>
             </select>
+
+            {formik.touched.uf && formik.errors.uf ? (
+              <div>{formik.errors.uf}</div>
+            ) : null}
           </Accordion.Body>
         </Accordion.Item>
 

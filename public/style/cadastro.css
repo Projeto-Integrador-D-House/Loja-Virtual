@@ -39,7 +39,7 @@
 }
 
 .form input, .form select, .form option{
-    color: black;
+    color: black!important;
     border: 0.125rem;
     border-radius: 0.25rem;
     display: block;
@@ -102,12 +102,13 @@
 .accordion-item , .accordion-item button{
     background-color: var(--clr-dark-blue)!important;
     margin-top: 0px;
-    border: none;
+    border: 1px solid;
+    border-color: aliceblue!important;
 }
 
-.accordion-item button[aria-expanded=true]{
+.accordion-item button{
     background-color: var(--clr-purple);
-    border-color: var(--clr-purple)!important;
+    border: none!important;
 }
 
 .accordion-button:focus{
@@ -115,4 +116,5 @@
 }
 
 .form button:disabled{
-cursor: not-allowed;}
+cursor: not-allowed;
+}
