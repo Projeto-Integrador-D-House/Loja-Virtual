@@ -1,6 +1,6 @@
 import React,{ createContext, useState} from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
-import  "bootstrap/dist/css/bootstrap.min.css";
+// import  "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 
 import ProdutoDetalhe from "./pages/ProdutoDetalhe";
 import CadastroValidacao from "./pages/CadastroValidacao";
+// import Endereco from "./pages/Endereco"
+import Produtos from "./pages/Produtos";
 
 export const UserContext = createContext()
 
@@ -32,10 +34,7 @@ export default function App() {
   return (
     <UserProvider>
       <Routes>
-        <Route
-          path="/"
-          element={<Layout />}
-        >
+        <Route path="/" element={<Layout />}>
           <Route
             index
             element={<Home />}
@@ -56,13 +55,20 @@ export default function App() {
           path="/descricaoProduto"
           element={<DescricaoProduto/>} 
         />
+        <Route
+          path="/produtos"
+          element={<Produtos/>} 
+        />
          
          <Route
           path="/cadastroValidacao"
           element={<CadastroValidacao/>} 
         />
 
-        <Route path="/produto/:id" element={<ProdutoDetalhe />} />
+        <Route 
+        path="/produto/:id" 
+        element={<ProdutoDetalhe />}
+         />
         </Route>
       </Routes>
     </UserProvider>
