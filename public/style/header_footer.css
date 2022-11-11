@@ -13,7 +13,7 @@ header{
     justify-content: space-between;
     width: 100%;
     height: 130px;
-    margin: 25px auto;
+    margin: 0px auto;
     padding: 10px;
     text-align: center;
     align-items: center;
@@ -31,8 +31,8 @@ header .header-logo a img{
 header nav.header-menu .menu-principal ul{ 
     display: flex;
     align-items: center;
-    color: var(--clr-white);
-    font-family: var(--f-secundary);
+    color: var(--clr-white)!important;
+    font-family: var(--f-secundary)!important;
 }
 header nav.header-menu .menu-principal ul li{
     text-transform: uppercase;
@@ -54,9 +54,9 @@ footer {
     font-family: var(--f-secundary);
     background-color: var(--clr-opacity-black);
     opacity: 0.8;
-    margin: 0px 10px;
-    padding: 20px;
-    padding-bottom: 0;
+    margin: 0px 1px!important;
+    padding: 20px!important;
+    padding-bottom: 0!important;
 }
 
 footer .footer-principal{
@@ -79,8 +79,8 @@ footer .titulo{
 }
 
 footer ul li:nth-child(2){
-margin-top: 10px;
-margin-bottom: 10px;
+margin-top: 10px!important;
+margin-bottom: 10px!important;
 }
 
 footer ul li:nth-child(4){
@@ -132,13 +132,14 @@ footer div.formas-de-pagamento h4{
 }
 
 footer div.formas-de-pagamento ul{
-    background-color: var(--clr-white);
+  
     width: 100%;
     display: inline-flex;
     font-size: 25px;
 }
 
-footer div.formas-de-pagamento ul li{
+footer div.formas-de-pagamento ul li {
+    
     align-items: center;
     margin-top:10px;
 }
@@ -147,6 +148,7 @@ footer div.formas-de-pagamento ul li i{
     color: var(--clr-dark-blue);
     padding: 5px;
     font-size: 30px;
+    
 }
 footer div.formas-de-pagamento ul li:nth-child(2){
     margin-left: 10px;

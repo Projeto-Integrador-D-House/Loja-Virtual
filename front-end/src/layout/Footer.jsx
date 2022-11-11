@@ -50,13 +50,27 @@ const Footer = () => {
         <div className="formas-de-pagamento">
             <h4>Formas de Pagamento</h4>
             <ul>
-                <li><i className="fa-brands fa-cc-visa"></i></li>
-                <li><i className="fa-brands fa-cc-mastercard"></i></li>
-                <li><i className="fa-brands fa-cc-discover"></i></li>
-                <li><i className="fa-brands fa-cc-amex"></i></li>
-                <li><i className="fa-brands fa-cc-jcb"></i></li>
-                <li><i className="fa-brands fa-cc-paypal"></i></li>
-                <li><i className="fa-brands fa-cc-diners-club"></i></li>
+                <li>
+                    <i className="fa-brands fa-cc-visa"></i>
+                </li>
+                <li>
+                    <i className="fa-brands fa-cc-mastercard"></i>
+                    </li>
+                <li>
+                    <i className="fa-brands fa-cc-discover"></i>
+                </li>
+                <li>
+                    <i className="fa-brands fa-cc-amex"></i>
+                </li>
+                <li>
+                    <i className="fa-brands fa-cc-jcb"></i>
+                </li>
+                <li>
+                    <i className="fa-brands fa-cc-paypal"></i>
+                </li>
+                <li>
+                    <i className="fa-brands fa-cc-diners-club"></i>
+                </li>
             </ul>
         </div>
     </footer>
