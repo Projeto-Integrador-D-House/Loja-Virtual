@@ -5,10 +5,42 @@ import * as yup from "yup";
 import Accordion from "react-bootstrap/Accordion";
 
 import '/public/style/cadastro.css';
+import { useState, useEffect } from 'react';
 
 function CadastroValidacao() {
 
+    const [cep, setCep] =useState(null);
+
+    const [endereco, setEndereco] = useState(null);
+    
     const navigate = useNavigate();
+
+    function encontraEndereco() {
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(res => res.json())
+        .then(enderecoInput => setEndereco(enderecoInput))
+    };
+
+    useEffect(()=> {
+
+      const isNotNull = cep != null;
+      const isValidCep = cep?.length == 8;
+  
+      if(isNotNull && isValidCep) {
+        encontraEndereco(); 
+      }
+  
+    }, [cep]);
+  
+    useEffect(() => {
+      const isNotNull = endereco != null;
+  
+      if(isNotNull) {
+        console.log(endereco);
+      }
+  
+    }, [endereco]);
+    
 
     const formik = useFormik({
 
@@ -229,9 +261,11 @@ function CadastroValidacao() {
               id="cep"
               name="cep"
               type="text"
-              onChange={formik.handleChange}
+            
               onBlur={formik.handleBlur}
-              value={formik.values.cep}
+              value={formik.values.setCep}
+              onChange={(e) => { setCep(e.target.value) }}
+              
             />
             {formik.touched.cep && formik.errors.cep ? (
               <div>{formik.errors.cep}</div>
@@ -242,9 +276,10 @@ function CadastroValidacao() {
               id="logradouro"
               name="logradouro"
               type="text"
-              value={formik.values.logradouro}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              value={endereco?.logradouro}
+              
             />
             {formik.touched.logradouro && formik.errors.logradouro ? (
               <div>{formik.errors.logradouro}</div>
@@ -283,7 +318,7 @@ function CadastroValidacao() {
               type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.bairro}
+              value={endereco?.bairro}
             />
             {formik.touched.bairro && formik.errors.bairro ? (
               <div>{formik.errors.bairro}</div>
@@ -296,7 +331,7 @@ function CadastroValidacao() {
               type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.cidade}
+              value={endereco?.localidade}
             />
             {formik.touched.cidade && formik.errors.cidade ? (
               <div>{formik.errors.cidade}</div>
@@ -309,7 +344,7 @@ function CadastroValidacao() {
               type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.uf}
+              value={endereco?.uf}
             >
               <option value={null}>Selecione o Estado</option>
               <option value="AC">Acre</option>
@@ -339,8 +374,11 @@ function CadastroValidacao() {
               <option value="SP">São Paulo</option>
               <option value="SE">Sergipe</option>
               <option value="TO">Tocantins</option>
-              <option value="EX">Estrangeiro</option>
             </select>
+
+            {formik.touched.uf && formik.errors.uf ? (
+              <div>{formik.errors.uf}</div>
+            ) : null}
           </Accordion.Body>
         </Accordion.Item>
 
