@@ -24,9 +24,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
-    color:var(--clr-white);
+    text-decoration: none!important;
+    list-style: none!important;
+    color:var(--clr-white)!important;
 }
 body{
     background-color: var(--clr-dark-blue);

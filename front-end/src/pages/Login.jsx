@@ -1,19 +1,25 @@
-import {useContext, useEffect, useState} from 'react';
+
+import {useContext, useEffect} from 'react';
 import {useCookies} from 'react-cookie';
 import {Link, useNavigate} from 'react-router-dom';
 import "/public/style/login.css";
 import { UserContext } from '../App';
-
+import {decode} from 'base-64'
 const Login = () => {
+
     const {setUser} = useContext(UserContext);
     const [cookie] = useCookies();
     const redirect = useNavigate();
+
     useEffect(()=>{
-        if(cookie.cliente !== undefined){
-            setUser({nome: 'luiz'})
+        if(cookie.cliente){
+            let payload = cookie.cliente.split('.')
+            const decodeinfo = decode(payload[1])
+            setUser(JSON.parse(decodeinfo))
             redirect('/')
         }
     },[])
+
     return (
         <>
 

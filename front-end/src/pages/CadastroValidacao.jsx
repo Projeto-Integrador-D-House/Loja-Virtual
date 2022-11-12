@@ -9,10 +9,6 @@ import { useState, useEffect } from 'react';
 
 function CadastroValidacao() {
 
-    const [cep, setCep] =useState(null);
-
-    const [endereco, setEndereco] = useState(null);
-    
     const navigate = useNavigate();
 
     function encontraEndereco() {
@@ -129,7 +125,7 @@ function CadastroValidacao() {
 
         }),
 
-        onSubmit: (values) => {
+        onSubmit: (values, actions) => {
             navigate('/api/cadastro');
         }
 
@@ -261,11 +257,9 @@ function CadastroValidacao() {
               id="cep"
               name="cep"
               type="text"
-            
+              onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.setCep}
-              onChange={(e) => { setCep(e.target.value) }}
-              
+              value={formik.values.cep}
             />
             {formik.touched.cep && formik.errors.cep ? (
               <div>{formik.errors.cep}</div>
@@ -278,8 +272,6 @@ function CadastroValidacao() {
               type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={endereco?.logradouro}
-              
             />
             {formik.touched.logradouro && formik.errors.logradouro ? (
               <div>{formik.errors.logradouro}</div>
@@ -375,10 +367,6 @@ function CadastroValidacao() {
               <option value="SE">Sergipe</option>
               <option value="TO">Tocantins</option>
             </select>
-
-            {formik.touched.uf && formik.errors.uf ? (
-              <div>{formik.errors.uf}</div>
-            ) : null}
           </Accordion.Body>
         </Accordion.Item>
 

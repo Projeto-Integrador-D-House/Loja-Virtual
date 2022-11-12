@@ -90,10 +90,7 @@ const ProdutoDetalhe = () => {
                 <h3> mais informações</h3>
               </summary>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                sapiente ab impedit consectetur quaerat. Aut consectetur in
-                quidem pariatur excepturi impedit, necessitatibus iste error?
-                Libero fugit accusantium quos quibusdam corporis?
+                {product.descricao}
               </p>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
