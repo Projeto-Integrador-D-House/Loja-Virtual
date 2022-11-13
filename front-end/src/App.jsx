@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import ProdutoDetalhe from "./pages/ProdutoDetalhe";
 import CadastroValidacao from "./pages/CadastroValidacao";
 import Produtos from "./pages/Produtos";
+import Pagamentos from "./pages/Pagamentos";
 
 
 
@@ -71,6 +72,11 @@ export default function App() {
         path="/produto/:id" 
         element={<ProdutoDetalhe />}
          />
+
+          <Route
+            path="/pagamento"
+            element={<Pagamentos/>}
+          />
         </Route>
       </Routes>
     </UserProvider>
