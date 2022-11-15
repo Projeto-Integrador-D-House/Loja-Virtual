@@ -1,7 +1,7 @@
 const {DataTypes} = require('sequelize')
 
 const sequelize = require('../conection.js')
-const pedido = require('./modelPedido')
+const endereco = require('./modelEndereco.js')
 // definição de modelo de usuarios - colunas e tipos de dados
 const usuario = sequelize.define('Usuario',{
     email: {
@@ -26,6 +26,6 @@ const usuario = sequelize.define('Usuario',{
 {
     timestamps: false
 })
-usuario.hasMany(pedido)
+usuario.hasMany(endereco)
 
 module.exports = usuario

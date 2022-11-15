@@ -11,7 +11,6 @@ const ProdutoDetalhe = () => {
         setProduct(produtodata);
       });
   }, []);
-  // console.log(p)
   return (
     <main>
       <div className="container-descricao">
@@ -19,19 +18,19 @@ const ProdutoDetalhe = () => {
           <ul>
             <li>
               <img
-                src="../public/image/console-personalizado.webp"
+                src="https://i.ibb.co/qsgNT0q/console-personalizado.png"
                 alt=""
               />
             </li>
             <li>
               <img
-                src="../public/image/console-personalizado.webp"
+                src="https://i.ibb.co/qsgNT0q/console-personalizado.png"
                 alt=""
               />
             </li>
             <li>
               <img
-                src="../public/image/console-personalizado.webp"
+                src="https://i.ibb.co/qsgNT0q/console-personalizado.png"
                 alt=""
               />
             </li>
@@ -55,7 +54,7 @@ const ProdutoDetalhe = () => {
             </div>
             <div className="preco-promocional">
               <h5>Por</h5>
-              <h4>R$ {product.preco - product.preco / 15}</h4>
+              <h4>R$ {product.preco}</h4>
             </div>
 
             <div className="quantidade-produto">
@@ -79,34 +78,32 @@ const ProdutoDetalhe = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
-        <div className="descricao">
-          <div className="descricao-curta">
-            <h3>Informações de Produto</h3>
+      <div className="descricao">
+        <div className="descricao-curta">
+          <h3>Informações de Produto</h3>
+          <p>{product.descricao}</p>
+          <details className="descricao-longa">
+            <summary>
+              <h3> mais informações</h3>
+            </summary>
             <p>{product.descricao}</p>
-            <details className="descricao-longa">
-              <summary>
-                <h3> mais informações</h3>
-              </summary>
-              <p>
-                {product.descricao}
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                sapiente ab impedit consectetur quaerat. Aut consectetur in
-                quidem pariatur excepturi impedit, necessitatibus iste error?
-                Libero fugit accusantium quos quibusdam corporis?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                sapiente ab impedit consectetur quaerat. Aut consectetur in
-                quidem pariatur excepturi impedit, necessitatibus iste error?
-                Libero fugit accusantium quos quibusdam corporis?
-              </p>
-            </details>
-          </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+              sapiente ab impedit consectetur quaerat. Aut consectetur in quidem
+              pariatur excepturi impedit, necessitatibus iste error? Libero
+              fugit accusantium quos quibusdam corporis?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+              sapiente ab impedit consectetur quaerat. Aut consectetur in quidem
+              pariatur excepturi impedit, necessitatibus iste error? Libero
+              fugit accusantium quos quibusdam corporis?
+            </p>
+          </details>
         </div>
+      </div>
     </main>
   );
 };

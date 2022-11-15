@@ -1,18 +1,16 @@
 
 import { useFormik } from 'formik';
-import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import  "bootstrap/dist/css/bootstrap.min.css";
 import Accordion from "react-bootstrap/Accordion";
 
 import '/public/style/cadastro.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function CadastroValidacao() {
+function  CadastroValidacao() {
 
   const [cep, setCep] = useState(null);
   const [endereco, setEndereco] = useState(null);
-
-  const navigate = useNavigate();
 
   function encontraEndereco() {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -34,11 +32,11 @@ function CadastroValidacao() {
   useEffect(() => {
 
     const isNotNull = endereco != null;
-
+    console.log(endereco)
   }, [endereco]);
 
 
-  const formik = useFormik({
+  let formik = useFormik({
 
     initialValues: {
       nome: "",
@@ -46,92 +44,71 @@ function CadastroValidacao() {
       dataNascimento: "",
       cpf: "",
       email: "",
+      telefone:"",
       senha: "",
       senhaC: "",
-      cep: "",
-      logradouro: "",
       numero: "",
-      complemento: "",
-      bairro: "",
-      cidade: "",
-      uf: "",
-
+      complemento:""
     },
 
-    validationSchema: yup.object().shape({
-      nome: yup
-        .string()
-        .required("Campo obrigatório"),
+     validationSchema: yup.object({
+       nome: yup
+         .string()
+         .required("Campo obrigatório"),
 
-      sobrenome: yup
-        .string()
-        .required("Campo obrigatório"),
+       sobrenome: yup
+         .string()
+         .required("Campo obrigatório"),
 
       dataNascimento: yup
         .date()
         .required("Campo obrigatório"),
 
-      cpf: yup
-        .string()
-        .required("Campo Obrigatório")
+       cpf: yup
+         .string()
+         .required("Campo Obrigatório")
         .matches(/^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/, "CPF inválido"),
 
-      email: yup
-        .string()
-        .email("E-mail inválido")
-        .required("O campo é obrigatório"),
+       email: yup
+         .string()
+         .email("E-mail inválido")
+         .required("O campo é obrigatório"),
 
         telefone: yup
-        .string()
-        .required("O campo é obrigatório")
-        .matches(/^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/, "Telefone inválido"),
+         .string()
+         .required("O campo é obrigatório")
+         .matches(/^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/, "Telefone inválido"),
 
       senha: yup
-        .string()
-        .required("Digite uma senha")
-        .matches(
-          /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-          "A senha precisa ter 8 carácteres com pelo menos: 1 letra maiúscula, 1 número e 1 carácter especial"
-        ),
+         .string()
+         .required("Digite uma senha")
+          .matches(
+            /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+            "A senha precisa ter 8 carácteres com pelo menos: 1 letra maiúscula, 1 número e 1 carácter especial"
+          ),
 
       senhaC: yup
-        .string()
-        .required("Confirme a sua senha")
+         .string()
+         .required("Confirme a sua senha")
         .oneOf([yup.ref('senha'), null], "As senhas precisam ser iguais"
-        ),
+     ),
 
-      cep: yup
-        .string()
-        .required("Campo Obrigatório")
-        .matches(/^\d{5}-?\d{3}$/, "CEP inválido"),
 
-      logradouro: yup
-        .string()
-        .required("Campo Obrigatório"),
+       numero: yup
+         .string()
+         .required("Campo Obrigatório"),
 
-      numero: yup
-        .string()
-        .required("Campo Obrigatório"),
+       complemento: yup
+         .string()
+         .required("Campo Obrigatório"),
+         
 
-      complemento: yup
-        .string(),
+ }),
 
-      bairro: yup
-        .string()
-        .required("Campo Obrigatório"),
-
-      cidade: yup
-        .string()
-        .required("Campo Obrigatório"),
-
-      uf: yup
-        .string()
-        .required("Campo Obrigatório"),
-
-    }),
-
-    onSubmit: (value) => {
-      navigate('/api/cadastro');
+    onSubmit: values => {
+      const {logradouro, uf,localidade, cep} = endereco
+     console.log({...values, logradouro,uf,localidade, cep})
+      
     }
 
   });
@@ -154,7 +131,7 @@ function CadastroValidacao() {
               type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.name}
+              value={formik.values.nome}
             />
             {formik.touched.nome && formik.errors.nome ? (
               <div>{formik.errors.nome}</div>
@@ -213,7 +190,7 @@ function CadastroValidacao() {
             <input
               id="email"
               name="email"
-              type="email"
+              type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
@@ -276,8 +253,6 @@ function CadastroValidacao() {
               name="cep"
               type="text"
               onChange={(e) => { setCep(e.target.value) }}
-              onBlur={formik.handleBlur}
-              value={formik.values.setCep}
             />
             <small>
               <a 
@@ -290,8 +265,6 @@ function CadastroValidacao() {
               id="logradouro"
               name="logradouro"
               type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
               value={endereco?.logradouro}
             />
 
@@ -326,8 +299,6 @@ function CadastroValidacao() {
               id="bairro"
               name="bairro"
               type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
               value={endereco?.bairro}
             />
 
@@ -337,8 +308,6 @@ function CadastroValidacao() {
               id="cidade"
               name="cidade"
               type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
               value={endereco?.localidade}
             />
 
@@ -348,8 +317,6 @@ function CadastroValidacao() {
               id="uf"
               name="uf"
               type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
               value={endereco?.uf}
             >
               <option value={null}>Selecione o Estado</option>

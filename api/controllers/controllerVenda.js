@@ -1,5 +1,5 @@
 const {v1: uuid} = require('uuid')
-const venda = require("../database/models/modelPedido")
+// const venda = require("../database/models/modelPedido")
 
 const controllers = {
     async fazerPedido(){

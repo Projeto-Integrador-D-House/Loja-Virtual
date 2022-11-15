@@ -64,7 +64,12 @@ function Produtos() {
           </ul>
         </nav>
       </aside>
-
+      {
+    produtos.length === 0 ?
+    <div>
+      CARREGANDO...
+    </div> 
+    :
       <div id="catalogo-produtos">
         {produtos.map((produto) => (
           <ProdutoWidget
@@ -73,6 +78,7 @@ function Produtos() {
           />
         ))}
       </div>
+      }
     </>
   );
 }

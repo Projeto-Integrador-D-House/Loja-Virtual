@@ -1,6 +1,5 @@
 import React,{ createContext, useState} from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
-import  "bootstrap/dist/css/bootstrap.min.css";
 
 // Components
 import Footer from "./layout/Footer";

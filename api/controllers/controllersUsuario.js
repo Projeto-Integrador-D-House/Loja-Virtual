@@ -5,7 +5,7 @@ const usuario = require("../database/models/modelUsuario.js");
 const controllers = {
   async cadastrarUsuario() {
     const [req, res] = arguments;
-    const { senha, nome, sobrenome, dataNascimento, cpf, email, cep, logradouro, numero, complemento, bairro, cidade, uf, role } = req.body;
+    const { senha, nome, sobrenome, dataNascimento, cpf, email, cep, local, numero, complemento, bairro, cidade, uf, role } = req.body;
 
     const senhaHashed = await crypto.hash(senha, 10);
 
@@ -17,10 +17,6 @@ const controllers = {
         dataNascimento,
         cpf,
         email,
-        cep,
-        logradouro,
-        numero,
-        complemento,
         bairro,
         cidade,
         uf,
@@ -28,6 +24,15 @@ const controllers = {
         senha: senhaHashed,
 
       });
+      if(local !== undefined){
+
+        usuario.createEndereco({
+          local,
+          cep,
+          numero,
+          complemento,
+        })
+      }
       res.status(201).redirect('/');
     } catch (e) {
       res.status(400).json(e.errors);

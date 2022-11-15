@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import CadastroValidacao from "./CadastroValidacao";
 import '/public/style/cadastro.css'
 
 const Cadastro = () => {
@@ -9,7 +10,6 @@ const [senhaC, setSenhaC] = useState('')
 let error = senha !== senhaC
 
 return (
-
 <div className="container">
         <form id="form" action="/api/cadastro" method="post" className="form">
             
@@ -53,7 +53,6 @@ return (
         
 
     </div>
-
 )
 }
 
