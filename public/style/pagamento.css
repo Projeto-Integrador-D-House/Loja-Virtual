@@ -43,3 +43,7 @@ div.toggle-pagamento{
 .card-body{
     background-color: var(--clr-dark-blue)!important;
 }
+
+button.btn-primary{
+    margin-bottom: 0!important;
+}
