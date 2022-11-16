@@ -1,9 +1,7 @@
 
 import { useFormik } from 'formik';
 import * as yup from "yup";
-import  "bootstrap/dist/css/bootstrap.min.css";
 import Accordion from "react-bootstrap/Accordion";
-
 import '/public/style/cadastro.css';
 import React, { useState, useEffect } from 'react';
 

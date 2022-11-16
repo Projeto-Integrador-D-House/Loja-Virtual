@@ -33,3 +33,13 @@ main.pagamento{
     border: 1px solid var(--clr-white);
     border-radius: 10px;
 }
+
+/*novo form*/
+
+div.toggle-pagamento{
+    display: flex;
+    
+}
+.card-body{
+    background-color: var(--clr-dark-blue)!important;
+}

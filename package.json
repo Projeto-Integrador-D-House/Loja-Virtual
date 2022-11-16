@@ -38,6 +38,7 @@
     "react-router": "^6.4.1",
     "react-router-dom": "^6.4.1",
     "reactstrap": "^9.1.5",
+    "rsuite": "^5.22.1",
     "sequelize": "^6.23.0",
     "uuid": "^9.0.0",
     "yup": "^0.32.11"

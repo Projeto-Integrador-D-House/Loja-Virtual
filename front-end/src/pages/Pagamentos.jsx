@@ -1,180 +1,127 @@
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Row from 'react-bootstrap/Row';
-import { Formik } from 'formik';
+
+import { useFormik} from 'formik';
+import { useState, StrictMode } from 'react';
 import * as yup from "yup";
-
-const schema = yup.object().shape({
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
-    username: yup.string().required(),
-    city: yup.string().required(),
-    state: yup.string().required(),
-    zip: yup.string().required(),
-    terms: yup.bool().required().oneOf([true], 'Terms must be accepted'),
-});
-
-onSubmit: (value) => {
-    navigate('/api/cadastro');
-}
+import { useNavigate } from "react-router-dom";
+import { Collapse, Button, CardBody, Card,UncontrolledCollapse } from 'reactstrap';
+import '/public/style/pagamento.css';
 
 
+function Pagamentos (args) {
 
-function Pagamentos() {
+    const [isOpen, setIsOpen] = useState(false);
 
+    const toggle = () => setIsOpen(!isOpen);
+
+    const navigate = useNavigate();
+
+    let formik = useFormik({
+
+        initialValues: {
+          entrega: "",
+        },
+    
+         validationSchema: yup.object({
+           entrega: yup
+             .string()
+             .required("Campo obrigatório"),
+    
+           
+    
+     }),
+    
+     onSubmit: (values) => {
+        navigate('/api/cadastro');
+          
+        }
+    
+      });
+        
     
     return (
 
-        <Formik
-            validationSchema={schema}
-            onSubmit={handleSubmit}
-            initialValues={{
-                firstName: '',
-                lastName: '',
-                username: '',
-                city: '',
-                state: '',
-                zip: '',
-                terms: false,
-            }}
-        >
-            {({
-                handleSubmit,
-                handleChange,
-                handleBlur,
-                values,
-                touched,
-                isValid,
-                errors,
-            }) => (
-                <Form noValidate onSubmit={handleSubmit}>
+        <div>
+            <div className='toggle-pagamento'>
+                <Button
+                    color="primary"
+                    id="toggler-1"
+                    style={{
+                        marginBottom: '1rem'
+                    }}
+                >
+                   <span><i className="fa-solid fa-mailbox"></i>Forma de Envio</span>
+                </Button>
+                <UncontrolledCollapse toggler="#toggler-1">
+                    <Card>
+                        <CardBody >
+                            <div id="my-radio-group">Selecione a opção de entrega:</div>
+                            <div role="group" aria-labelledby="my-radio-group">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="escolhaEntrega"
+                                        id='entrega'
+                                        value="PAC"
+                                    />
+                                    PAC
+                                    <small> R$ 13,00</small>
+                                    <small> chega em 28 dias</small>
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="escolhaEntrega"
+                                        id='entrega'
+                                        value="SEDEX"
+                                    />
+                                    SEDEX
+                                    <small> R$ 33,00</small>
+                                    <small> chega em 10 dias</small>
+                                </label>
+                            </div>
+                        </CardBody>
+                    </Card>
+                </UncontrolledCollapse>
+            </div>
+            <div className='toggle-pagamento'>
+                <Button
+                    color="primary"
+                    id="toggler-2"
+                    style={{
+                        marginBottom: '1rem'
+                    }}
+                >
+                    Toggle
+                </Button>
+                <UncontrolledCollapse toggler="#toggler-2">
+                    <Card>
+                        <CardBody>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magni, voluptas debitis similique porro a molestias consequuntur earum odio officiis natus, amet hic, iste sed dignissimos esse fuga! Minus, alias.
+                        </CardBody>
+                    </Card>
+                </UncontrolledCollapse>
+            </div>
+            <div className='toggle-pagamento'>
+                <Button
+                    color="primary"
+                    id="toggler-3"
+                    style={{
+                        marginBottom: '1rem'
+                    }}
+                >
+                    Toggle
+                </Button>
+                <UncontrolledCollapse toggler="#toggler-3">
+                    <Card>
+                        <CardBody>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magni, voluptas debitis similique porro a molestias consequuntur earum odio officiis natus, amet hic, iste sed dignissimos esse fuga! Minus, alias.
+                        </CardBody>
+                    </Card>
+                </UncontrolledCollapse>
+            </div>
+        </div>
 
-                    <Row className="mb-3">
-                        <Form.Group className="mb-3">
-                            <Form.Check
-                                required
-                                name="terms"
-                                label="Agree to terms and conditions"
-                                onChange={handleChange}
-                                isInvalid={!!errors.terms}
-                                feedback={errors.terms}
-                                feedbackType="invalid"
-                                id="validationFormik0"
-                            />
-                        </Form.Group>
-                    </Row>
-                    <Row className="mb-3">
-                        <Form.Group as={Col} md="4" controlId="validationFormik01">
-                            <Form.Label>First name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="firstName"
-                                value={values.firstName}
-                                onChange={handleChange}
-                                isValid={touched.firstName && !errors.firstName}
-                            />
-                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group as={Col} md="4" controlId="validationFormik02">
-                            <Form.Label>Last name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="lastName"
-                                value={values.lastName}
-                                onChange={handleChange}
-                                isValid={touched.lastName && !errors.lastName}
-                            />
-
-                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group as={Col} md="4" controlId="validationFormikUsername">
-                            <Form.Label>Username</Form.Label>
-                            <InputGroup hasValidation>
-                                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Username"
-                                    aria-describedby="inputGroupPrepend"
-                                    name="username"
-                                    value={values.username}
-                                    onChange={handleChange}
-                                    isInvalid={!!errors.username}
-                                />
-                                <Form.Control.Feedback type="invalid">
-                                    {errors.username}
-                                </Form.Control.Feedback>
-                            </InputGroup>
-                        </Form.Group>
-                    </Row>
-                    <Row className="mb-3">
-                        <Form.Group as={Col} md="6" controlId="validationFormik03">
-                            <Form.Label>City</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="City"
-                                name="city"
-                                value={values.city}
-                                onChange={handleChange}
-                                isInvalid={!!errors.city}
-                            />
-
-                            <Form.Control.Feedback type="invalid">
-                                {errors.city}
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group as={Col} md="3" controlId="validationFormik04">
-                            <Form.Label>State</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="State"
-                                name="state"
-                                value={values.state}
-                                onChange={handleChange}
-                                isInvalid={!!errors.state}
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                {errors.state}
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group as={Col} md="3" controlId="validationFormik05">
-                            <Form.Label>Zip</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Zip"
-                                name="zip"
-                                value={values.zip}
-                                onChange={handleChange}
-                                isInvalid={!!errors.zip}
-                            />
-
-                            <Form.Control.Feedback type="invalid">
-                                {errors.zip}
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                    </Row>
-                    <Form.Group className="mb-3">
-                        <Form.Check
-                            required
-                            name="terms"
-                            label="Agree to terms and conditions"
-                            onChange={handleChange}
-                            isInvalid={!!errors.terms}
-                            feedback={errors.terms}
-                            feedbackType="invalid"
-                            id="validationFormik0"
-                        />
-                    </Form.Group>
-                    <Button type="submit">Submit form</Button>
-                </Form>
-            )}
-        </Formik>
     );
-
-    render(<Pagamentos />);
 }
-
-
 
 export default Pagamentos
