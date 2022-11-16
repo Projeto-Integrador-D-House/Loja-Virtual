@@ -1,6 +1,7 @@
 
 import { useFormik } from 'formik';
 import * as yup from "yup";
+import axios from 'axios';
 import Accordion from "react-bootstrap/Accordion";
 import '/public/style/cadastro.css';
 import React, { useState, useEffect } from 'react';
@@ -106,7 +107,13 @@ function  CadastroValidacao() {
     onSubmit: values => {
       const {logradouro, uf,localidade, cep} = endereco
      console.log({...values, logradouro,uf,localidade, cep})
-      
+    //  fetch('/api/cadastro', {
+    //   method: 'post',
+    //   body:{
+    //     ...values, logradouro,uf,localidade, cep
+    //   }
+    //  })
+      axios.post('/api/cadastro',{...values, logradouro,uf,localidade, cep})
     }
 
   });

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Projeto-Integrador-D-House/Loja-Virtual#readme",
   "dependencies": {
+    "axios": "^1.1.3",
     "base-64": "^1.0.0",
     "bcrypt": "^5.0.1",
     "bootstrap": "^5.2.2",

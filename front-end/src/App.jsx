@@ -44,7 +44,7 @@ export default function App() {
           />
         <Route
           path="/cadastro"
-          element={<Cadastro />} 
+          element={<CadastroValidacao />} 
           
           />
 

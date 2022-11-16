@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import CadastroValidacao from "./CadastroValidacao";
+
 import '/public/style/cadastro.css'
 
 const Cadastro = () => {
