@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button, Card, CardBody, Collapse } from "reactstrap";
+import "/public/style/carrinho.css";
 
 
 export default function PagamentosV() {
@@ -172,7 +173,41 @@ export default function PagamentosV() {
                     </Card>
                 </Collapse>
          </div>
+         <div class="resumo-compra">
+            <h3>Resumo do Pedido</h3>
 
+            <table id="carrinho-item">
+               <td>
+                    <div>
+                        <p>Subtotal:</p>
+                        <p>R$99,90</p>
+                    </div>
+
+                    <div>
+                        <p>Frete:</p>
+                        <p>R$99,90</p>
+                    </div>  
+                    <div>
+                        <p>Desconto do Cupom:</p>
+                        <p> - R$10,00</p>
+                    </div>
+               </td>
+               <tr class="footer">
+
+                <td>Total de compra</td>
+                <td>
+                    <div id="total">R$ 189,70</div>
+                </td>
+
+            </tr>
+            </table>
+        </div>
+
+    <section class="btn">
+
+        <button class="btn-comprar">Finalizar Compra</button>
+
+    </section>
          </div>
     );
 }
