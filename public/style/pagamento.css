@@ -151,6 +151,19 @@ div.resumo-compra table tr td:nth-child(1){
     text-align: left;
 }
 
+section.btn:focus{
+    border: none;
+}
+
+.btn{
+    border-color:none!important;
+}
+
 section.btn button.btn-comprar{
-    width: 50%!important;
+    width: 100%!important;
+   
+}
+
+button .btn-comprar::selection{
+    border: none;
 }
