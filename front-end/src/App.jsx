@@ -12,8 +12,8 @@ import Login from "./pages/Login";
 import ProdutoDetalhe from "./pages/ProdutoDetalhe";
 import CadastroValidacao from "./pages/CadastroValidacao";
 import Produtos from "./pages/Produtos";
-import Pagamentos from "./pages/Pagamentos";
 import PagamentosFinal from "./pages/PagamentoFinal";
+import Carrinho from "./pages/Carrinho";
 
 
 
@@ -75,8 +75,8 @@ export default function App() {
          />
 
           <Route
-            path="/pagamento"
-            element={<Pagamentos/>}
+            path="/carrinho"
+            element={<Carrinho/>}
           />
           <Route
             path="/pagamentoFinal"
