@@ -47,7 +47,7 @@ const Carrinho = () => {
                         <div className="preco">R$ 99,90</div>
                     </td>
                     <td className="small">
-                        <input className="quantidade" type="number" value="1" size="2" maxlength="2" min="1" max="10" step="1"/>
+                        <input className="quantidade" type="number"  size="2" maxlength="2" min="1" max="10" step="1"/>
                     </td>
                 </tbody>
             </table>

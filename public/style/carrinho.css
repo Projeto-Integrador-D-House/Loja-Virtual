@@ -92,8 +92,9 @@ tr.footer{
 }
 
 td .quantidade {
-    color: #000;
+    color: #000!important;
     padding: 5px;
+    width: 100px;
     text-align: center;
     border-radius: 10px;
     border: 1px solid var(--clr-white);
@@ -131,7 +132,7 @@ table#pedidos{
 section#incluso-pedido{
   margin-top: 55px;
   float: right;
-  margin-right: 40px;
+  margin-right: 75px;
   margin-bottom: 60px;
 }
 
@@ -151,7 +152,7 @@ div#cupom-desconto, div#calcular-frete{
     width: 200px;
     height: 30px;
     padding: 5px;
-    color: var(--clr-dark-blue);
+    color: var(--clr-dark-blue)!important;
     border-radius: 10px 0px 0px 10px;
     outline:none;
     margin-right: 0px;
@@ -160,17 +161,17 @@ div#cupom-desconto, div#calcular-frete{
 
 #cupom-desconto .btn-geral, #calcular-frete .btn-geral{
     position: relative;
-    width: 22%;
+    width: 25%;
     height: 30px;
     padding: 5px;
     margin-left: 0px;
     border-radius: 0px 10px 10px 0px;
     right: 4.5px;
-    top:1px
+    top:2px
 }
 
 #calcular-frete .btn-geral{
-    top:0px;
+    top:3px;
 }
 
 #calcular-frete small{
