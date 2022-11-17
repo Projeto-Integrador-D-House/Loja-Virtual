@@ -8,6 +8,11 @@ Nosso principal objetivo é que sua experiência com o mundo gamer seja a mais i
 
 https://www.figma.com/file/WHY4MpG8RqjlXtuElOlFmS/Wireframe-DH-PI?node-id=7%3A595
 
+
+## Demo
+
+[Loja Virtual](https://loja-virtual-production.up.railway.app/)
+
 ## Equipe :computer:
 -   @lucasakirahori
 -   @RubensRRC
@@ -26,6 +31,19 @@ Com o foco de atender os dispositivos desktop e mobile.
 
 ## Tools :inbox_tray:
 
+-   Vite.js
+-   Nodemon
+
 ## Back - End :construction:
 
+-   Express.js
+-   Sequelize ORM
+-   JWT.IO
+
 ### Rotas :twisted_rightwards_arrows:
+
+| Rota  | Descrição  |
+|---|---|
+| /api  | Rotas Publicas  |
+| /api/admin  | Rotas Protegidas  |
+|   |   |

@@ -6,35 +6,37 @@ const controllers = {
   async cadastrarUsuario() {
     const [req, res] = arguments;
     const { senha, nome, sobrenome, email, role } = req.body;
-    // const {cep, logradouro,numero,complemento} = req.body
+    const {cep, logradouro,numero,complemento} = req.body
 
-    var senhaHashed = await crypto.hash(senha, 10);
-    console.log(senhaHashed)
+    const senhaHashed = await crypto.hash(senha, 10);
+
     let usuarioCriado;
     try {
       usuarioCriado = await usuario.create({
         nome,
         sobrenome,
-        // dataNascimento,
-        // cpf,
         email,
-        // bairro,
-        // cidade,
-        // uf,
         role,
         senha: senhaHashed,
+        endereco:[
+          {
+            local: logradouro,
+            cep,
+            numero,
+            complemento,
+          }
+        ]
 
       });
-      // if(logradouro !== undefined){
-
-      //   usuario.createEndereco({
-      //     local: logradouro,
-      //     cep,
-      //     numero,
-      //     complemento,
-      //   })
-      // }
-      res.status(201).redirect('/');
+      //  if(logradouro !== undefined){
+      // const enderecoCriado = await usuarioCriado.createEndereco({
+      //      local: logradouro,
+      //      cep,
+      //      numero,
+      //      complemento,
+      //    })
+      //  }
+      res.status(201).json(usuarioCriado);
     } catch (e) {
       res.status(400).json(e.errors);
     }

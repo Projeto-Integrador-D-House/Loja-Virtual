@@ -8,10 +8,10 @@ const endereco = sequelize.define('Endereco',{
     type: DataTypes.STRING
    },
    cep: {
-    type: DataTypes.INTEGER
+    type: DataTypes.STRING
    },
    numero: {
-    type: DataTypes.INTEGER
+    type: DataTypes.STRING
    },
    complemento:{
     type: DataTypes.STRING

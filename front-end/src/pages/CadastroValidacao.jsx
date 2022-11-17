@@ -31,7 +31,7 @@ function  CadastroValidacao() {
   useEffect(() => {
 
     const isNotNull = endereco != null;
-    console.log(endereco)
+    // console.log(endereco)
   }, [endereco]);
 
 
@@ -107,13 +107,9 @@ function  CadastroValidacao() {
     onSubmit: values => {
       const {logradouro, uf,localidade, cep} = endereco
      console.log({...values, logradouro,uf,localidade, cep})
-    //  fetch('/api/cadastro', {
-    //   method: 'post',
-    //   body:{
-    //     ...values, logradouro,uf,localidade, cep
-    //   }
-    //  })
+
       axios.post('/api/cadastro',{...values, logradouro,uf,localidade, cep})
+        .then(resp => console.log("RESPONSE", resp))
     }
 
   });
