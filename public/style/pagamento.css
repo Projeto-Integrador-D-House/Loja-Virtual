@@ -16,7 +16,6 @@ main.pagamento{
     text-transform: uppercase;
     width: 100%;
 }
-
 .pagamento .endereco-entrega form label,.pagamento .escolha-entrega form label, .pagamento .escolha-pagamento form label{
     display: block;
     font-family: var(--f-secundary);
@@ -42,8 +41,116 @@ div.toggle-pagamento{
 }
 .card-body{
     background-color: var(--clr-dark-blue)!important;
+    border: 1px solid var(--clr-white);
 }
 
-button.btn-primary{
+div.app {
+    display: flex;
+    justify-content: space-around;
+    margin:15px auto;
+}
+
+div.section{
+    width:50%
+}
+
+div.articles-buttons{
+    display: flex;
+}
+button.btn h3{
+    font-size: 16px;
+    font-family: var(--f-secundary);
+}
+
+button.btn{
     margin-bottom: 0!important;
+    background-color: var(--clr-purple);
+    border-color: var(--clr-purple);
+    border-radius: 0px;
+    font-size: 10px;
+    
+}
+
+button.btn:focus{
+    background-color: var(--clr-light-blue);
+    color: var(--clr-purple);
+}
+
+button.btn:focus h3{
+    color: var(--clr-purple);
+}
+
+.card-body form label{
+    display: block;
+    text-align: left;
+    padding-top: 15px;
+}
+
+.card-body form input{
+    color: var(--clr-dark-blue)!important;
+    outline: none;
+    padding: 5px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: 5px;
+}
+
+.card-body form select{
+    color: var(--clr-dark-blue)!important;
+    padding: 5px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: 5px;
+}
+
+.card-body form select option{
+    color: var(--clr-dark-blue)!important;
+}
+
+.card-body .pagamentoBoleto{
+    line-height: 25px;
+}
+
+.card-body .pagamentoBoleto .titulo, .card-body .pagamentoCartaoCred .titulo, .card-body .pagamentoPix .titulo{
+    margin-bottom: 25px;
+}
+.card-body .pagamentoBoleto .desconto, .card-body .pagamentoCartaoCred .desconto, .card-body .pagamentoPix .desconto{
+    background-color: var(--sucesso-cor);
+    border: 1px solid var(--sucesso-cor);
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.card-body .pagamentoBoleto ul{
+    margin-top: 25px;
+    text-align: justify;
+}
+
+.card-body .pagamentoPix .title-txt .column h6{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.card-body .pagamentoPix .title-txt .column {
+    text-align: justify;
+}
+
+div.resumo-compra{
+    margin-top: 10px !important;
+}
+
+div.resumo-compra h3{
+    text-align: left;
+    font-size: 16px;
+}
+
+div.resumo-compra table tr td:nth-child(1){
+    text-align: left;
+}
+
+section.btn button.btn-comprar{
+    width: 50%!important;
 }

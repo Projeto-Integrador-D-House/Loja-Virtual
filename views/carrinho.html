@@ -61,31 +61,30 @@
 
         <div class="resumo-compra">
             <h3>Resumo do Pedido</h3>
-
-            <table id="carrinho-item">
-               <td>
-                    <div>
-                        <p>Subtotal:</p>
-                        <p>R$99,90</p>
-                    </div>
-
-                    <div>
-                        <p>Frete:</p>
-                        <p>R$99,90</p>
-                    </div>  
-                    <div>
-                        <p>Desconto do Cupom:</p>
-                        <p> - R$10,00</p>
-                    </div>
-               </td>
-               <tr class="footer">
-
-                <td>Total de compra</td>
-                <td>
-                    <div id="total">R$ 189,70</div>
-                </td>
-
-            </tr>
+            
+            <table id="resumo">
+                <tr class="subtotal">
+                    <td>Subtotal:</td>
+                    <td class="valorSubtotal">R$99,90</td>
+                </tr>
+            
+                <tr class="frete">
+                    <td>Frete:</td>
+                    <td class="valorFrete">R$99,90</td>
+                </tr>
+            
+                <tr class="desconto">
+                    <td>Desconto do Cupom:</td>
+                    <td class="valorDesconto"> - R$10,00</td>
+                </tr>
+                <tr class="footer">
+            
+                    <td>Total de compra</td>
+                    <td colspan="2">
+                        <div id="total">R$ 189,70</div>
+                    </td>
+            
+                </tr>
             </table>
         </div>
 

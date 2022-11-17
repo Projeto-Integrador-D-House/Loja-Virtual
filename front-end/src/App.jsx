@@ -13,7 +13,7 @@ import ProdutoDetalhe from "./pages/ProdutoDetalhe";
 import CadastroValidacao from "./pages/CadastroValidacao";
 import Produtos from "./pages/Produtos";
 import Pagamentos from "./pages/Pagamentos";
-import PagamentosV from "./pages/PagamentoV";
+import PagamentosFinal from "./pages/PagamentoFinal";
 
 
 
@@ -79,8 +79,8 @@ export default function App() {
             element={<Pagamentos/>}
           />
           <Route
-            path="/pagamento_2"
-            element={<PagamentosV/>}
+            path="/pagamentoFinal"
+            element={<PagamentosFinal/>}
           />
           
         </Route>

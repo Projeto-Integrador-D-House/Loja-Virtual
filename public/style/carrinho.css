@@ -101,13 +101,21 @@ td .quantidade {
 }
 
 div.resumo-compra{
-    margin-top: 65px;
+    margin-top: 60px;
 }
 
 .resumo-compra h3{
     font-family: var(--f-secundary);
+    margin-bottom: 5px;
 }
 
+.resumo-compra table#resumo{
+    border: 1px solid var(--clr-white);
+}
+
+.resumo-compra table#resumo tr td{
+    border-bottom: none;
+}
 table#pedidos{
     border-top: 1px solid var(--clr-white);
 }
